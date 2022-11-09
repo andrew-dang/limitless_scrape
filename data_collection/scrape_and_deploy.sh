@@ -1,4 +1,4 @@
-#!/bin.sh
+#!/bin/sh
 
 # activate the conda env
 # CALL conda.bat activate dash_app
