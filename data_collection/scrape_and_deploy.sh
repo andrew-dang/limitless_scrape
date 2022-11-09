@@ -1,7 +1,7 @@
 #!/bin.sh
 
 # # Scrape data 
-python scrape_and_process.python
+python scrape_and_process.py
 
 # login to Heroku 
 git add . 
