@@ -49,7 +49,7 @@ if use_checkpoint:
     net_new_url_ls = [url for url in all_url_ls if url not in ckpt_url_ls] 
     
     # 5. Create url dict; Only use first 2 urls as a test
-    url_dict = create_urls(net_new_url_ls[:10])
+    url_dict = create_urls(net_new_url_ls[:2])
                        
     # # 6. Scrape urls in dict and add date
     scrape_results_dict = multi_latenight_scrape(url_dict)
