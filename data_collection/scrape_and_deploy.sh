@@ -1,5 +1,8 @@
 #!/bin.sh
 
+# activate the conda env
+conda activate dash_app
+
 # cd to right directory
 cd C:/Users/andre/Desktop/limitless_scrape/data_collection
 
