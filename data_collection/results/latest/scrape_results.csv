@@ -1,4 +1,1227 @@
 deck,opposing_deck,date,winrate,games_played
+Mew Genesect,Jolteon Inteleon,2022-01-03,0.52,66
+Mew Genesect,Tornadus,2022-01-03,1.0,1
+Mew Genesect,Calyrex Inteleon,2022-01-03,0.55,38
+Mew Genesect,Eternatus,2022-01-03,0.5,10
+Mew Genesect,Glaceon,2022-01-03,1.0,1
+Mew Genesect,Zacian,2022-01-03,0.55,20
+Mew Genesect,Mew Genesect,2022-01-03,0.5,196
+Mew Genesect,Dragapult Inteleon,2022-01-03,0.0,1
+Mew Genesect,Victini,2022-01-03,0.65,23
+Mew Genesect,Umbreon Urshifu,2022-01-03,0.34,53
+Mew Genesect,Duraludon,2022-01-03,0.34,38
+Mew Genesect,Shadow Rider Calyrex,2022-01-03,0.62,8
+Mew Genesect,Urshifu Inteleon,2022-01-03,0.8,46
+Mew Genesect,Dark Box Inteleon,2022-01-03,0.36,39
+Mew Genesect,Rayquaza,2022-01-03,0.5,2
+Mew Genesect,Suicune Ludicolo,2022-01-03,0.8,5
+Mew Genesect,Coalossal,2022-01-03,1.0,3
+Mew Genesect,Hoopa Genesect,2022-01-03,0.4,5
+Mew Genesect,Suicune Inteleon,2022-01-03,0.17,12
+Mew Genesect,Tyranitar,2022-01-03,1.0,2
+Mew Genesect,Rapid Strike Urshifu,2022-01-03,1.0,4
+Mew Genesect,Gengar,2022-01-03,0.25,16
+Mew Genesect,Obstagoon Inteleon,2022-01-03,0.0,1
+Mew Genesect,Hoopa Moltres,2022-01-03,0.33,9
+Mew Genesect,Calyrex Alcremie,2022-01-03,1.0,1
+Mew Genesect,Sableye,2022-01-03,1.0,1
+Mew Genesect,Urshifu Moltres,2022-01-03,1.0,4
+Mew Genesect,Lapras,2022-01-03,1.0,1
+Mew Genesect,Flareon,2022-01-03,1.0,1
+Mew Genesect,Rapid Strike Malamar,2022-01-03,0.17,6
+Mew Genesect,Other,2022-01-03,0.33,3
+Mew Genesect,Stonjourner,2022-01-03,1.0,1
+Mew Genesect,Sylveon,2022-01-03,1.0,2
+Mew Genesect,Zeraora,2022-01-03,1.0,1
+Mew Genesect,Alcremie,2022-01-03,0.5,2
+Mew Genesect,Sableye Inteleon,2022-01-03,0.75,4
+Mew Genesect,Metagross,2022-01-03,1.0,1
+Mew Genesect,Galarian Weezing,2022-01-03,1.0,1
+Mew Genesect,Jolteon,2022-01-03,0.25,4
+Mew Genesect,Single Strike Urshifu,2022-01-03,0.0,1
+Mew Genesect,Inteleon Inteleon,2022-01-03,1.0,3
+Mew Genesect,Blissey,2022-01-03,1.0,3
+Mew Genesect,Victini Inteleon,2022-01-03,0.0,1
+Suicune Inteleon,Hoopa Moltres,2022-01-03,1.0,2
+Suicune Inteleon,Alcremie,2022-01-03,1.0,1
+Suicune Inteleon,Mew Genesect,2022-01-03,0.83,12
+Suicune Inteleon,Umbreon Urshifu,2022-01-03,1.0,2
+Suicune Inteleon,Urshifu Inteleon,2022-01-03,0.25,4
+Suicune Inteleon,Suicune Inteleon,2022-01-03,0.5,8
+Suicune Inteleon,Shadow Rider Calyrex,2022-01-03,1.0,1
+Suicune Inteleon,Jolteon Inteleon,2022-01-03,0.22,9
+Suicune Inteleon,Other,2022-01-03,1.0,1
+Suicune Inteleon,Rayquaza,2022-01-03,1.0,1
+Suicune Inteleon,Hoopa Genesect,2022-01-03,1.0,1
+Suicune Inteleon,Dark Box Inteleon,2022-01-03,0.25,4
+Suicune Inteleon,Gengar,2022-01-03,1.0,1
+Suicune Inteleon,Zacian,2022-01-03,0.0,5
+Suicune Inteleon,Suicune Ludicolo,2022-01-03,0.5,2
+Suicune Inteleon,Single Strike Seviper,2022-01-03,0.0,1
+Suicune Inteleon,Victini,2022-01-03,1.0,1
+Suicune Inteleon,Duraludon,2022-01-03,0.57,7
+Suicune Inteleon,Eternatus,2022-01-03,1.0,1
+Suicune Inteleon,Victini Inteleon,2022-01-03,1.0,1
+Suicune Inteleon,Urshifu Moltres,2022-01-03,0.0,1
+Duraludon,Dark Box Inteleon,2022-01-03,0.18,17
+Duraludon,Mew Genesect,2022-01-03,0.63,38
+Duraludon,Urshifu Inteleon,2022-01-03,0.65,20
+Duraludon,Umbreon Urshifu,2022-01-03,0.64,14
+Duraludon,Gengar,2022-01-03,0.67,6
+Duraludon,Duraludon,2022-01-03,0.5,48
+Duraludon,Jolteon,2022-01-03,1.0,2
+Duraludon,Jolteon Inteleon,2022-01-03,0.52,23
+Duraludon,Metagross,2022-01-03,1.0,1
+Duraludon,Eternatus,2022-01-03,0.2,5
+Duraludon,Boltund,2022-01-03,1.0,2
+Duraludon,Urshifu Moltres,2022-01-03,0.5,2
+Duraludon,Decidueye Inteleon,2022-01-03,1.0,1
+Duraludon,Crabominable,2022-01-03,1.0,1
+Duraludon,Suicune Ludicolo,2022-01-03,0.5,4
+Duraludon,Leafeon Inteleon,2022-01-03,1.0,2
+Duraludon,Other,2022-01-03,1.0,1
+Duraludon,Calyrex Inteleon,2022-01-03,0.33,9
+Duraludon,Zacian,2022-01-03,0.33,9
+Duraludon,Sableye Inteleon,2022-01-03,1.0,3
+Duraludon,Calyrex Alcremie,2022-01-03,1.0,1
+Duraludon,Victini Inteleon,2022-01-03,0.0,2
+Duraludon,Hoopa Moltres,2022-01-03,1.0,3
+Duraludon,Rapid Strike Urshifu,2022-01-03,1.0,1
+Duraludon,Obstagoon Inteleon,2022-01-03,1.0,2
+Duraludon,Shadow Rider Calyrex,2022-01-03,0.5,2
+Duraludon,Single Strike Urshifu,2022-01-03,0.67,3
+Duraludon,Single Strike Seviper,2022-01-03,1.0,1
+Duraludon,Suicune Inteleon,2022-01-03,0.14,7
+Duraludon,Hoopa Genesect,2022-01-03,1.0,1
+Duraludon,Victini,2022-01-03,0.0,2
+Duraludon,Tyranitar,2022-01-03,1.0,1
+Urshifu Inteleon,Urshifu Inteleon,2022-01-03,0.5,24
+Urshifu Inteleon,Mew Genesect,2022-01-03,0.17,46
+Urshifu Inteleon,Jolteon Inteleon,2022-01-03,0.63,35
+Urshifu Inteleon,Suicune Ludicolo,2022-01-03,0.4,5
+Urshifu Inteleon,Other,2022-01-03,1.0,2
+Urshifu Inteleon,Hoopa Moltres,2022-01-03,1.0,4
+Urshifu Inteleon,Zacian,2022-01-03,0.5,10
+Urshifu Inteleon,Victini,2022-01-03,0.56,9
+Urshifu Inteleon,Duraludon,2022-01-03,0.25,20
+Urshifu Inteleon,Calyrex Inteleon,2022-01-03,0.67,9
+Urshifu Inteleon,Sableye Inteleon,2022-01-03,0.67,3
+Urshifu Inteleon,Suicune Inteleon,2022-01-03,0.75,4
+Urshifu Inteleon,Rapid Strike Malamar,2022-01-03,1.0,2
+Urshifu Inteleon,Sylveon,2022-01-03,1.0,1
+Urshifu Inteleon,Decidueye Inteleon,2022-01-03,1.0,1
+Urshifu Inteleon,Dark Box Inteleon,2022-01-03,0.91,11
+Urshifu Inteleon,Umbreon Urshifu,2022-01-03,0.77,13
+Urshifu Inteleon,Gengar,2022-01-03,0.8,5
+Urshifu Inteleon,Glaceon,2022-01-03,1.0,1
+Urshifu Inteleon,Blissey,2022-01-03,0.5,2
+Urshifu Inteleon,Eternatus,2022-01-03,1.0,4
+Urshifu Inteleon,Rayquaza Flaaffy,2022-01-03,1.0,1
+Urshifu Inteleon,Stonjourner,2022-01-03,0.0,1
+Urshifu Inteleon,Metagross,2022-01-03,0.0,1
+Urshifu Inteleon,Alcremie,2022-01-03,1.0,1
+Urshifu Inteleon,Single Strike Urshifu,2022-01-03,1.0,2
+Urshifu Inteleon,Dragapult Inteleon,2022-01-03,0.0,1
+Urshifu Inteleon,Shadow Rider Calyrex,2022-01-03,0.0,3
+Urshifu Inteleon,Jolteon,2022-01-03,1.0,1
+Urshifu Inteleon,Hoopa Genesect,2022-01-03,0.0,2
+Zacian,Hoopa Moltres,2022-01-03,1.0,4
+Zacian,Urshifu Inteleon,2022-01-03,0.5,10
+Zacian,Inteleon Inteleon,2022-01-03,0.33,3
+Zacian,Shadow Rider Calyrex,2022-01-03,0.5,2
+Zacian,Flareon,2022-01-03,0.0,1
+Zacian,Dark Box Inteleon,2022-01-03,0.88,16
+Zacian,Mew Genesect,2022-01-03,0.4,20
+Zacian,Obstagoon Inteleon,2022-01-03,1.0,1
+Zacian,Duraludon,2022-01-03,0.56,9
+Zacian,Leafeon Moltres,2022-01-03,0.33,3
+Zacian,Jolteon Inteleon,2022-01-03,0.53,15
+Zacian,Coalossal,2022-01-03,0.0,1
+Zacian,Suicune Ludicolo,2022-01-03,0.75,4
+Zacian,Alcremie,2022-01-03,1.0,1
+Zacian,Eternatus,2022-01-03,0.0,2
+Zacian,Umbreon Urshifu,2022-01-03,0.33,3
+Zacian,Other,2022-01-03,1.0,1
+Zacian,Urshifu Moltres,2022-01-03,0.5,2
+Zacian,Gengar,2022-01-03,0.0,2
+Zacian,Blissey,2022-01-03,0.0,1
+Zacian,Suicune Inteleon,2022-01-03,1.0,5
+Zacian,Dragapult Inteleon,2022-01-03,0.0,1
+Zacian,Calyrex Inteleon,2022-01-03,0.0,2
+Zacian,Victini Inteleon,2022-01-03,0.0,1
+Zacian,Sylveon,2022-01-03,0.0,2
+Gengar,Duraludon,2022-01-03,0.33,6
+Gengar,Jolteon Inteleon,2022-01-03,0.5,8
+Gengar,Other,2022-01-03,1.0,2
+Gengar,Calyrex Inteleon,2022-01-03,0.0,1
+Gengar,Umbreon Urshifu,2022-01-03,0.6,5
+Gengar,Eternatus,2022-01-03,0.5,2
+Gengar,Urshifu Moltres,2022-01-03,0.0,1
+Gengar,Rayquaza Flaaffy,2022-01-03,1.0,1
+Gengar,Mew Genesect,2022-01-03,0.75,16
+Gengar,Inteleon Inteleon,2022-01-03,1.0,1
+Gengar,Victini,2022-01-03,1.0,3
+Gengar,Urshifu Inteleon,2022-01-03,0.2,5
+Gengar,Single Strike Urshifu,2022-01-03,0.0,1
+Gengar,Rapid Strike Urshifu,2022-01-03,1.0,1
+Gengar,Suicune Inteleon,2022-01-03,0.0,1
+Gengar,Zacian,2022-01-03,0.5,2
+Gengar,Dark Box Inteleon,2022-01-03,0.0,2
+Gengar,Suicune Ludicolo,2022-01-03,0.0,1
+Gengar,Jolteon,2022-01-03,1.0,1
+Jolteon Inteleon,Urshifu Inteleon,2022-01-03,0.34,35
+Jolteon Inteleon,Dark Box Inteleon,2022-01-03,0.55,22
+Jolteon Inteleon,Sableye Inteleon,2022-01-03,1.0,2
+Jolteon Inteleon,Calyrex Inteleon,2022-01-03,0.62,13
+Jolteon Inteleon,Umbreon Urshifu,2022-01-03,0.48,23
+Jolteon Inteleon,Rapid Strike Malamar,2022-01-03,0.75,4
+Jolteon Inteleon,Mew Genesect,2022-01-03,0.44,66
+Jolteon Inteleon,Duraludon,2022-01-03,0.43,23
+Jolteon Inteleon,Rayquaza Flaaffy,2022-01-03,1.0,1
+Jolteon Inteleon,Single Strike Urshifu,2022-01-03,0.33,3
+Jolteon Inteleon,Hoopa Moltres,2022-01-03,0.8,5
+Jolteon Inteleon,Jolteon Inteleon,2022-01-03,0.5,68
+Jolteon Inteleon,Victini,2022-01-03,0.78,9
+Jolteon Inteleon,Blissey,2022-01-03,0.0,1
+Jolteon Inteleon,Leafeon Moltres,2022-01-03,0.25,4
+Jolteon Inteleon,Sylveon,2022-01-03,0.5,6
+Jolteon Inteleon,Gengar,2022-01-03,0.5,8
+Jolteon Inteleon,Rapid Strike Urshifu,2022-01-03,0.17,6
+Jolteon Inteleon,Stonjourner,2022-01-03,0.5,2
+Jolteon Inteleon,Suicune Inteleon,2022-01-03,0.78,9
+Jolteon Inteleon,Suicune Ludicolo,2022-01-03,0.67,3
+Jolteon Inteleon,Zacian,2022-01-03,0.47,15
+Jolteon Inteleon,Shadow Rider Calyrex,2022-01-03,0.2,5
+Jolteon Inteleon,Tyranitar,2022-01-03,0.0,2
+Jolteon Inteleon,Jolteon,2022-01-03,0.5,2
+Jolteon Inteleon,Victini Inteleon,2022-01-03,0.67,3
+Jolteon Inteleon,Crabominable,2022-01-03,1.0,1
+Jolteon Inteleon,Leafeon Inteleon,2022-01-03,1.0,1
+Jolteon Inteleon,Rayquaza,2022-01-03,1.0,1
+Jolteon Inteleon,Eternatus,2022-01-03,0.0,3
+Jolteon Inteleon,Other,2022-01-03,1.0,1
+Jolteon Inteleon,Calyrex Alcremie,2022-01-03,0.0,1
+Jolteon Inteleon,Inteleon Inteleon,2022-01-03,1.0,1
+Jolteon Inteleon,Glaceon,2022-01-03,1.0,1
+Jolteon Inteleon,Urshifu Moltres,2022-01-03,1.0,1
+Jolteon,Rapid Strike Malamar,2022-01-03,1.0,1
+Jolteon,Duraludon,2022-01-03,0.0,2
+Jolteon,Jolteon Inteleon,2022-01-03,0.5,2
+Jolteon,Calyrex Inteleon,2022-01-03,0.5,2
+Jolteon,Mew Genesect,2022-01-03,0.75,4
+Jolteon,Umbreon Urshifu,2022-01-03,1.0,2
+Jolteon,Dark Box Inteleon,2022-01-03,1.0,2
+Jolteon,Urshifu Inteleon,2022-01-03,0.0,1
+Jolteon,Gengar,2022-01-03,0.0,1
+Jolteon,Victini Inteleon,2022-01-03,1.0,1
+Dark Box Inteleon,Umbreon Urshifu,2022-01-03,0.58,12
+Dark Box Inteleon,Other,2022-01-03,0.67,3
+Dark Box Inteleon,Jolteon Inteleon,2022-01-03,0.45,22
+Dark Box Inteleon,Zacian,2022-01-03,0.12,16
+Dark Box Inteleon,Duraludon,2022-01-03,0.76,17
+Dark Box Inteleon,Mew Genesect,2022-01-03,0.62,39
+Dark Box Inteleon,Victini,2022-01-03,1.0,6
+Dark Box Inteleon,Single Strike Urshifu,2022-01-03,1.0,1
+Dark Box Inteleon,Hoopa Moltres,2022-01-03,0.67,9
+Dark Box Inteleon,Urshifu Inteleon,2022-01-03,0.09,11
+Dark Box Inteleon,Dragapult Inteleon,2022-01-03,0.5,2
+Dark Box Inteleon,Calyrex Inteleon,2022-01-03,0.67,6
+Dark Box Inteleon,Suicune Inteleon,2022-01-03,0.5,4
+Dark Box Inteleon,Dark Box Inteleon,2022-01-03,0.27,22
+Dark Box Inteleon,Blissey,2022-01-03,1.0,1
+Dark Box Inteleon,Gengar,2022-01-03,0.5,2
+Dark Box Inteleon,Suicune Ludicolo,2022-01-03,0.0,2
+Dark Box Inteleon,Zeraora,2022-01-03,0.0,1
+Dark Box Inteleon,Jolteon,2022-01-03,0.0,2
+Dark Box Inteleon,Rapid Strike Malamar,2022-01-03,1.0,2
+Dark Box Inteleon,Leafeon Moltres,2022-01-03,0.5,2
+Dark Box Inteleon,Eternatus,2022-01-03,1.0,1
+Dark Box Inteleon,Sylveon,2022-01-03,1.0,1
+Hoopa Genesect,Mew Genesect,2022-01-03,0.6,5
+Hoopa Genesect,Suicune Inteleon,2022-01-03,0.0,1
+Hoopa Genesect,Umbreon Urshifu,2022-01-03,1.0,2
+Hoopa Genesect,Duraludon,2022-01-03,0.0,1
+Hoopa Genesect,Dragapult Inteleon,2022-01-03,1.0,1
+Hoopa Genesect,Urshifu Inteleon,2022-01-03,1.0,2
+Hoopa Genesect,Hoopa Moltres,2022-01-03,1.0,1
+Umbreon Urshifu,Dark Box Inteleon,2022-01-03,0.42,12
+Umbreon Urshifu,Umbreon Urshifu,2022-01-03,0.5,68
+Umbreon Urshifu,Rapid Strike Malamar,2022-01-03,0.67,3
+Umbreon Urshifu,Mew Genesect,2022-01-03,0.62,53
+Umbreon Urshifu,Jolteon Inteleon,2022-01-03,0.48,23
+Umbreon Urshifu,Victini,2022-01-03,0.22,9
+Umbreon Urshifu,Duraludon,2022-01-03,0.36,14
+Umbreon Urshifu,Gengar,2022-01-03,0.4,5
+Umbreon Urshifu,Inteleon Inteleon,2022-01-03,0.67,3
+Umbreon Urshifu,Rayquaza Flaaffy,2022-01-03,0.5,4
+Umbreon Urshifu,Hoopa Moltres,2022-01-03,0.14,7
+Umbreon Urshifu,Suicune Inteleon,2022-01-03,0.0,2
+Umbreon Urshifu,Leafeon Inteleon,2022-01-03,0.0,1
+Umbreon Urshifu,Zeraora,2022-01-03,1.0,1
+Umbreon Urshifu,Alcremie,2022-01-03,1.0,1
+Umbreon Urshifu,Urshifu Inteleon,2022-01-03,0.08,13
+Umbreon Urshifu,Sylveon,2022-01-03,0.5,2
+Umbreon Urshifu,Eternatus,2022-01-03,0.33,3
+Umbreon Urshifu,Glaceon,2022-01-03,0.0,1
+Umbreon Urshifu,Other,2022-01-03,1.0,1
+Umbreon Urshifu,Dragapult Inteleon,2022-01-03,1.0,1
+Umbreon Urshifu,Jolteon,2022-01-03,0.0,2
+Umbreon Urshifu,Suicune Ludicolo,2022-01-03,0.5,2
+Umbreon Urshifu,Lapras,2022-01-03,1.0,1
+Umbreon Urshifu,Urshifu Moltres,2022-01-03,0.0,1
+Umbreon Urshifu,Calyrex Inteleon,2022-01-03,0.0,6
+Umbreon Urshifu,Shadow Rider Calyrex,2022-01-03,0.75,4
+Umbreon Urshifu,Sableye,2022-01-03,0.0,1
+Umbreon Urshifu,Zacian,2022-01-03,0.33,3
+Umbreon Urshifu,Hoopa Genesect,2022-01-03,0.0,2
+Umbreon Urshifu,Single Strike Urshifu,2022-01-03,0.0,1
+Umbreon Urshifu,Tyranitar,2022-01-03,0.0,1
+Umbreon Urshifu,Stonjourner,2022-01-03,1.0,1
+Victini Inteleon,Hoopa Moltres,2022-01-03,1.0,1
+Victini Inteleon,Jolteon Inteleon,2022-01-03,0.33,3
+Victini Inteleon,Duraludon,2022-01-03,1.0,2
+Victini Inteleon,Leafeon Moltres,2022-01-03,1.0,2
+Victini Inteleon,Zacian,2022-01-03,1.0,1
+Victini Inteleon,Suicune Inteleon,2022-01-03,0.0,1
+Victini Inteleon,Mew Genesect,2022-01-03,1.0,1
+Victini Inteleon,Jolteon,2022-01-03,0.0,1
+Calyrex Inteleon,Suicune Ludicolo,2022-01-03,0.0,3
+Calyrex Inteleon,Crabominable,2022-01-03,0.0,1
+Calyrex Inteleon,Jolteon Inteleon,2022-01-03,0.31,13
+Calyrex Inteleon,Single Strike Seviper,2022-01-03,0.0,1
+Calyrex Inteleon,Urshifu Inteleon,2022-01-03,0.33,9
+Calyrex Inteleon,Mew Genesect,2022-01-03,0.45,38
+Calyrex Inteleon,Gengar,2022-01-03,1.0,1
+Calyrex Inteleon,Shadow Rider Calyrex,2022-01-03,0.75,4
+Calyrex Inteleon,Other,2022-01-03,0.0,2
+Calyrex Inteleon,Duraludon,2022-01-03,0.67,9
+Calyrex Inteleon,Boltund,2022-01-03,1.0,1
+Calyrex Inteleon,Jolteon,2022-01-03,0.5,2
+Calyrex Inteleon,Umbreon Urshifu,2022-01-03,1.0,6
+Calyrex Inteleon,Dark Box Inteleon,2022-01-03,0.33,6
+Calyrex Inteleon,Blissey,2022-01-03,1.0,1
+Calyrex Inteleon,Victini,2022-01-03,1.0,3
+Calyrex Inteleon,Stonjourner,2022-01-03,0.33,3
+Calyrex Inteleon,Zacian,2022-01-03,1.0,2
+Calyrex Inteleon,Coalossal,2022-01-03,1.0,1
+Calyrex Inteleon,Tyranitar,2022-01-03,1.0,1
+Calyrex Inteleon,Urshifu Moltres,2022-01-03,1.0,1
+Calyrex Inteleon,Glaceon,2022-01-03,1.0,1
+Calyrex Inteleon,Rapid Strike Malamar,2022-01-03,1.0,1
+Calyrex Inteleon,Inteleon Inteleon,2022-01-03,1.0,1
+Calyrex Inteleon,Calyrex Inteleon,2022-01-03,0.5,4
+Suicune Ludicolo,Mew Genesect,2022-01-03,0.2,5
+Suicune Ludicolo,Boltund,2022-01-03,0.0,1
+Suicune Ludicolo,Calyrex Inteleon,2022-01-03,1.0,3
+Suicune Ludicolo,Urshifu Inteleon,2022-01-03,0.6,5
+Suicune Ludicolo,Galarian Weezing,2022-01-03,1.0,1
+Suicune Ludicolo,Victini,2022-01-03,0.0,1
+Suicune Ludicolo,Duraludon,2022-01-03,0.5,4
+Suicune Ludicolo,Jolteon Inteleon,2022-01-03,0.33,3
+Suicune Ludicolo,Zacian,2022-01-03,0.25,4
+Suicune Ludicolo,Umbreon Urshifu,2022-01-03,0.5,2
+Suicune Ludicolo,Suicune Inteleon,2022-01-03,0.5,2
+Suicune Ludicolo,Dark Box Inteleon,2022-01-03,0.5,2
+Suicune Ludicolo,Rapid Strike Urshifu,2022-01-03,0.0,1
+Suicune Ludicolo,Hoopa Moltres,2022-01-03,0.0,1
+Suicune Ludicolo,Gengar,2022-01-03,1.0,1
+Sylveon,Jolteon Inteleon,2022-01-03,0.5,6
+Sylveon,Urshifu Inteleon,2022-01-03,0.0,1
+Sylveon,Sableye Inteleon,2022-01-03,1.0,1
+Sylveon,Rapid Strike Malamar,2022-01-03,0.5,2
+Sylveon,Umbreon Urshifu,2022-01-03,0.5,2
+Sylveon,Mew Genesect,2022-01-03,0.0,2
+Sylveon,Victini,2022-01-03,1.0,1
+Sylveon,Zacian,2022-01-03,1.0,2
+Sylveon,Dark Box Inteleon,2022-01-03,0.0,1
+Eternatus,Alcremie,2022-01-03,0.0,1
+Eternatus,Stonjourner,2022-01-03,0.0,1
+Eternatus,Duraludon,2022-01-03,0.8,5
+Eternatus,Mew Genesect,2022-01-03,0.4,10
+Eternatus,Victini,2022-01-03,0.0,3
+Eternatus,Galarian Weezing,2022-01-03,1.0,1
+Eternatus,Sableye Inteleon,2022-01-03,0.5,2
+Eternatus,Hoopa Moltres,2022-01-03,0.0,2
+Eternatus,Gengar,2022-01-03,0.5,2
+Eternatus,Blissey,2022-01-03,0.0,1
+Eternatus,Umbreon Urshifu,2022-01-03,0.33,3
+Eternatus,Jolteon Inteleon,2022-01-03,1.0,3
+Eternatus,Urshifu Inteleon,2022-01-03,0.0,4
+Eternatus,Single Strike Urshifu,2022-01-03,0.0,1
+Eternatus,Flareon,2022-01-03,1.0,1
+Eternatus,Zacian,2022-01-03,1.0,2
+Eternatus,Crabominable,2022-01-03,1.0,1
+Eternatus,Shadow Rider Calyrex,2022-01-03,1.0,1
+Eternatus,Lapras,2022-01-03,1.0,1
+Eternatus,Suicune Inteleon,2022-01-03,0.0,1
+Eternatus,Dark Box Inteleon,2022-01-03,0.0,1
+Hoopa Moltres,Umbreon Urshifu,2022-01-03,0.86,7
+Hoopa Moltres,Dark Box Inteleon,2022-01-03,0.11,9
+Hoopa Moltres,Shadow Rider Calyrex,2022-01-03,1.0,2
+Hoopa Moltres,Victini Inteleon,2022-01-03,0.0,1
+Hoopa Moltres,Inteleon Inteleon,2022-01-03,0.0,2
+Hoopa Moltres,Suicune Inteleon,2022-01-03,0.0,2
+Hoopa Moltres,Zacian,2022-01-03,0.0,4
+Hoopa Moltres,Urshifu Inteleon,2022-01-03,0.0,4
+Hoopa Moltres,Jolteon Inteleon,2022-01-03,0.2,5
+Hoopa Moltres,Mew Genesect,2022-01-03,0.56,9
+Hoopa Moltres,Victini,2022-01-03,0.5,2
+Hoopa Moltres,Eternatus,2022-01-03,1.0,2
+Hoopa Moltres,Duraludon,2022-01-03,0.0,3
+Hoopa Moltres,Rapid Strike Malamar,2022-01-03,1.0,1
+Hoopa Moltres,Coalossal,2022-01-03,0.0,1
+Hoopa Moltres,Alcremie,2022-01-03,1.0,1
+Hoopa Moltres,Suicune Ludicolo,2022-01-03,0.0,1
+Hoopa Moltres,Other,2022-01-03,1.0,1
+Hoopa Moltres,Sableye Inteleon,2022-01-03,0.5,2
+Hoopa Moltres,Leafeon Inteleon,2022-01-03,0.0,1
+Hoopa Moltres,Single Strike Urshifu,2022-01-03,1.0,2
+Hoopa Moltres,Rapid Strike Urshifu,2022-01-03,1.0,1
+Hoopa Moltres,Hoopa Genesect,2022-01-03,0.0,1
+Shadow Rider Calyrex,Shadow Rider Calyrex,2022-01-03,0.5,8
+Shadow Rider Calyrex,Calyrex Inteleon,2022-01-03,0.25,4
+Shadow Rider Calyrex,Stonjourner,2022-01-03,0.0,1
+Shadow Rider Calyrex,Mew Genesect,2022-01-03,0.38,8
+Shadow Rider Calyrex,Zacian,2022-01-03,0.5,2
+Shadow Rider Calyrex,Hoopa Moltres,2022-01-03,0.0,2
+Shadow Rider Calyrex,Inteleon Inteleon,2022-01-03,1.0,1
+Shadow Rider Calyrex,Suicune Inteleon,2022-01-03,0.0,1
+Shadow Rider Calyrex,Jolteon Inteleon,2022-01-03,0.6,5
+Shadow Rider Calyrex,Rapid Strike Malamar,2022-01-03,0.5,2
+Shadow Rider Calyrex,Victini,2022-01-03,0.5,2
+Shadow Rider Calyrex,Umbreon Urshifu,2022-01-03,0.25,4
+Shadow Rider Calyrex,Sableye Inteleon,2022-01-03,0.0,1
+Shadow Rider Calyrex,Duraludon,2022-01-03,0.5,2
+Shadow Rider Calyrex,Eternatus,2022-01-03,0.0,1
+Shadow Rider Calyrex,Urshifu Inteleon,2022-01-03,1.0,3
+Victini,Dark Box Inteleon,2022-01-03,0.0,6
+Victini,Mew Genesect,2022-01-03,0.3,23
+Victini,Jolteon Inteleon,2022-01-03,0.22,9
+Victini,Eternatus,2022-01-03,0.67,3
+Victini,Urshifu Inteleon,2022-01-03,0.44,9
+Victini,Umbreon Urshifu,2022-01-03,0.67,9
+Victini,Urshifu Moltres,2022-01-03,0.5,2
+Victini,Sableye,2022-01-03,1.0,1
+Victini,Single Strike Seviper,2022-01-03,0.5,2
+Victini,Gengar,2022-01-03,0.0,3
+Victini,Zeraora,2022-01-03,0.0,1
+Victini,Hoopa Moltres,2022-01-03,0.5,2
+Victini,Shadow Rider Calyrex,2022-01-03,0.5,2
+Victini,Suicune Ludicolo,2022-01-03,1.0,1
+Victini,Calyrex Inteleon,2022-01-03,0.0,3
+Victini,Decidueye Inteleon,2022-01-03,1.0,1
+Victini,Stonjourner,2022-01-03,1.0,1
+Victini,Other,2022-01-03,0.0,1
+Victini,Suicune Inteleon,2022-01-03,0.0,1
+Victini,Lapras,2022-01-03,0.0,1
+Victini,Sylveon,2022-01-03,0.0,1
+Victini,Rapid Strike Urshifu,2022-01-03,0.0,2
+Victini,Duraludon,2022-01-03,1.0,2
+Victini,Victini,2022-01-03,0.5,4
+Leafeon Moltres,Jolteon Inteleon,2022-01-03,0.75,4
+Leafeon Moltres,Zacian,2022-01-03,0.67,3
+Leafeon Moltres,Victini Inteleon,2022-01-03,0.0,2
+Leafeon Moltres,Dark Box Inteleon,2022-01-03,0.5,2
+Leafeon Moltres,Sableye Inteleon,2022-01-03,0.0,1
+Sableye Inteleon,Sylveon,2022-01-03,0.0,1
+Sableye Inteleon,Urshifu Inteleon,2022-01-03,0.33,3
+Sableye Inteleon,Jolteon Inteleon,2022-01-03,0.0,2
+Sableye Inteleon,Duraludon,2022-01-03,0.0,3
+Sableye Inteleon,Eternatus,2022-01-03,0.5,2
+Sableye Inteleon,Mew Genesect,2022-01-03,0.25,4
+Sableye Inteleon,Inteleon Inteleon,2022-01-03,1.0,1
+Sableye Inteleon,Hoopa Moltres,2022-01-03,0.5,2
+Sableye Inteleon,Shadow Rider Calyrex,2022-01-03,1.0,1
+Sableye Inteleon,Blissey,2022-01-03,1.0,1
+Sableye Inteleon,Leafeon Moltres,2022-01-03,1.0,1
+Rapid Strike Malamar,Jolteon Inteleon,2022-01-03,0.25,4
+Rapid Strike Malamar,Urshifu Inteleon,2022-01-03,0.0,2
+Rapid Strike Malamar,Umbreon Urshifu,2022-01-03,0.33,3
+Rapid Strike Malamar,Jolteon,2022-01-03,0.0,1
+Rapid Strike Malamar,Mew Genesect,2022-01-03,0.83,6
+Rapid Strike Malamar,Shadow Rider Calyrex,2022-01-03,0.0,2
+Rapid Strike Malamar,Sylveon,2022-01-03,0.5,2
+Rapid Strike Malamar,Other,2022-01-03,1.0,1
+Rapid Strike Malamar,Hoopa Moltres,2022-01-03,0.0,1
+Rapid Strike Malamar,Tyranitar,2022-01-03,1.0,1
+Rapid Strike Malamar,Dark Box Inteleon,2022-01-03,0.0,2
+Rapid Strike Malamar,Calyrex Inteleon,2022-01-03,0.0,1
+Glaceon,Mew Genesect,2022-01-03,0.0,1
+Glaceon,Umbreon Urshifu,2022-01-03,1.0,1
+Glaceon,Urshifu Inteleon,2022-01-03,0.0,1
+Glaceon,Boltund,2022-01-03,1.0,1
+Glaceon,Stonjourner,2022-01-03,1.0,1
+Glaceon,Leafeon Inteleon,2022-01-03,1.0,1
+Glaceon,Jolteon Inteleon,2022-01-03,0.0,1
+Glaceon,Calyrex Inteleon,2022-01-03,0.0,1
+Single Strike Urshifu,Dark Box Inteleon,2022-01-03,0.0,1
+Single Strike Urshifu,Jolteon Inteleon,2022-01-03,0.67,3
+Single Strike Urshifu,Metagross,2022-01-03,1.0,1
+Single Strike Urshifu,Gengar,2022-01-03,1.0,1
+Single Strike Urshifu,Eternatus,2022-01-03,1.0,1
+Single Strike Urshifu,Duraludon,2022-01-03,0.33,3
+Single Strike Urshifu,Mew Genesect,2022-01-03,1.0,1
+Single Strike Urshifu,Hoopa Moltres,2022-01-03,0.0,2
+Single Strike Urshifu,Umbreon Urshifu,2022-01-03,1.0,1
+Single Strike Urshifu,Urshifu Inteleon,2022-01-03,0.0,2
+Rapid Strike Urshifu,Blissey,2022-01-03,0.0,1
+Rapid Strike Urshifu,Mew Genesect,2022-01-03,0.0,4
+Rapid Strike Urshifu,Jolteon Inteleon,2022-01-03,0.83,6
+Rapid Strike Urshifu,Alcremie,2022-01-03,0.0,1
+Rapid Strike Urshifu,Duraludon,2022-01-03,0.0,1
+Rapid Strike Urshifu,Gengar,2022-01-03,0.0,1
+Rapid Strike Urshifu,Other,2022-01-03,1.0,1
+Rapid Strike Urshifu,Suicune Ludicolo,2022-01-03,1.0,1
+Rapid Strike Urshifu,Leafeon Inteleon,2022-01-03,0.0,1
+Rapid Strike Urshifu,Victini,2022-01-03,1.0,2
+Rapid Strike Urshifu,Hoopa Moltres,2022-01-03,0.0,1
+Dragapult Inteleon,Mew Genesect,2022-01-03,1.0,1
+Dragapult Inteleon,Dark Box Inteleon,2022-01-03,0.5,2
+Dragapult Inteleon,Umbreon Urshifu,2022-01-03,0.0,1
+Dragapult Inteleon,Inteleon Inteleon,2022-01-03,0.0,1
+Dragapult Inteleon,Zacian,2022-01-03,1.0,1
+Dragapult Inteleon,Urshifu Inteleon,2022-01-03,1.0,1
+Dragapult Inteleon,Hoopa Genesect,2022-01-03,0.0,1
+Lapras,Calyrex Alcremie,2022-01-03,1.0,1
+Lapras,Mew Genesect,2022-01-03,0.0,1
+Lapras,Umbreon Urshifu,2022-01-03,0.0,1
+Lapras,Sableye,2022-01-03,1.0,1
+Lapras,Other,2022-01-03,1.0,1
+Lapras,Victini,2022-01-03,1.0,1
+Lapras,Eternatus,2022-01-03,0.0,1
+Stonjourner,Shadow Rider Calyrex,2022-01-03,1.0,1
+Stonjourner,Eternatus,2022-01-03,1.0,1
+Stonjourner,Blissey,2022-01-03,1.0,1
+Stonjourner,Jolteon Inteleon,2022-01-03,0.5,2
+Stonjourner,Mew Genesect,2022-01-03,0.0,1
+Stonjourner,Victini,2022-01-03,0.0,1
+Stonjourner,Urshifu Inteleon,2022-01-03,1.0,1
+Stonjourner,Calyrex Inteleon,2022-01-03,0.0,3
+Stonjourner,Glaceon,2022-01-03,0.0,1
+Stonjourner,Umbreon Urshifu,2022-01-03,0.0,1
+Inteleon Inteleon,Zacian,2022-01-03,0.33,3
+Inteleon Inteleon,Hoopa Moltres,2022-01-03,1.0,2
+Inteleon Inteleon,Umbreon Urshifu,2022-01-03,0.0,3
+Inteleon Inteleon,Gengar,2022-01-03,0.0,1
+Inteleon Inteleon,Shadow Rider Calyrex,2022-01-03,0.0,1
+Inteleon Inteleon,Boltund,2022-01-03,1.0,1
+Inteleon Inteleon,Sableye Inteleon,2022-01-03,0.0,1
+Inteleon Inteleon,Single Strike Seviper,2022-01-03,1.0,1
+Inteleon Inteleon,Dragapult Inteleon,2022-01-03,1.0,1
+Inteleon Inteleon,Jolteon Inteleon,2022-01-03,0.0,1
+Inteleon Inteleon,Mew Genesect,2022-01-03,0.0,3
+Inteleon Inteleon,Calyrex Inteleon,2022-01-03,0.0,1
+Tyranitar,Mew Genesect,2022-01-03,0.0,2
+Tyranitar,Jolteon Inteleon,2022-01-03,1.0,2
+Tyranitar,Umbreon Urshifu,2022-01-03,1.0,1
+Tyranitar,Rapid Strike Malamar,2022-01-03,0.0,1
+Tyranitar,Calyrex Inteleon,2022-01-03,0.0,1
+Tyranitar,Duraludon,2022-01-03,0.0,1
+Blissey,Jolteon Inteleon,2022-01-03,1.0,1
+Blissey,Rapid Strike Urshifu,2022-01-03,1.0,1
+Blissey,Eternatus,2022-01-03,1.0,1
+Blissey,Stonjourner,2022-01-03,0.0,1
+Blissey,Urshifu Inteleon,2022-01-03,0.5,2
+Blissey,Calyrex Inteleon,2022-01-03,0.0,1
+Blissey,Dark Box Inteleon,2022-01-03,0.0,1
+Blissey,Zacian,2022-01-03,1.0,1
+Blissey,Mew Genesect,2022-01-03,0.0,3
+Blissey,Sableye Inteleon,2022-01-03,0.0,1
+Leafeon Inteleon,Umbreon Urshifu,2022-01-03,1.0,1
+Leafeon Inteleon,Duraludon,2022-01-03,0.0,2
+Leafeon Inteleon,Jolteon Inteleon,2022-01-03,0.0,1
+Leafeon Inteleon,Hoopa Moltres,2022-01-03,1.0,1
+Leafeon Inteleon,Rapid Strike Urshifu,2022-01-03,1.0,1
+Leafeon Inteleon,Glaceon,2022-01-03,0.0,1
+Single Strike Seviper,Calyrex Inteleon,2022-01-03,1.0,1
+Single Strike Seviper,Victini,2022-01-03,0.5,2
+Single Strike Seviper,Inteleon Inteleon,2022-01-03,0.0,1
+Single Strike Seviper,Suicune Inteleon,2022-01-03,1.0,1
+Single Strike Seviper,Duraludon,2022-01-03,0.0,1
+Urshifu Moltres,Duraludon,2022-01-03,0.5,2
+Urshifu Moltres,Victini,2022-01-03,0.5,2
+Urshifu Moltres,Mew Genesect,2022-01-03,0.0,4
+Urshifu Moltres,Gengar,2022-01-03,1.0,1
+Urshifu Moltres,Umbreon Urshifu,2022-01-03,1.0,1
+Urshifu Moltres,Zacian,2022-01-03,0.5,2
+Urshifu Moltres,Jolteon Inteleon,2022-01-03,0.0,1
+Urshifu Moltres,Calyrex Inteleon,2022-01-03,0.0,1
+Urshifu Moltres,Suicune Inteleon,2022-01-03,0.0,1
+Rayquaza Flaaffy,Umbreon Urshifu,2022-01-03,0.5,4
+Rayquaza Flaaffy,Jolteon Inteleon,2022-01-03,0.0,1
+Rayquaza Flaaffy,Gengar,2022-01-03,0.0,1
+Rayquaza Flaaffy,Urshifu Inteleon,2022-01-03,0.0,1
+Alcremie,Eternatus,2022-01-03,1.0,1
+Alcremie,Suicune Inteleon,2022-01-03,0.0,1
+Alcremie,Rapid Strike Urshifu,2022-01-03,1.0,1
+Alcremie,Umbreon Urshifu,2022-01-03,0.0,1
+Alcremie,Mew Genesect,2022-01-03,0.5,2
+Alcremie,Zacian,2022-01-03,0.0,1
+Alcremie,Hoopa Moltres,2022-01-03,0.0,1
+Alcremie,Urshifu Inteleon,2022-01-03,0.0,1
+Coalossal,Mew Genesect,2022-01-03,0.0,3
+Coalossal,Zacian,2022-01-03,1.0,1
+Coalossal,Hoopa Moltres,2022-01-03,1.0,1
+Coalossal,Calyrex Inteleon,2022-01-03,0.0,1
+Other,Gengar,2022-01-03,0.0,2
+Other,Dark Box Inteleon,2022-01-03,0.0,3
+Other,Urshifu Inteleon,2022-01-03,0.0,2
+Other,Mew Genesect,2022-01-03,0.33,3
+Other,Umbreon Urshifu,2022-01-03,0.0,1
+Other,Suicune Inteleon,2022-01-03,0.0,1
+Other,Duraludon,2022-01-03,0.0,1
+Other,Calyrex Inteleon,2022-01-03,1.0,2
+Other,Rapid Strike Malamar,2022-01-03,0.0,1
+Other,Jolteon Inteleon,2022-01-03,0.0,1
+Other,Rapid Strike Urshifu,2022-01-03,0.0,1
+Other,Zacian,2022-01-03,0.0,1
+Other,Hoopa Moltres,2022-01-03,0.0,1
+Other,Victini,2022-01-03,1.0,1
+Other,Lapras,2022-01-03,0.0,1
+Rayquaza,Mew Genesect,2022-01-03,0.5,2
+Rayquaza,Suicune Inteleon,2022-01-03,0.0,1
+Rayquaza,Jolteon Inteleon,2022-01-03,0.0,1
+Boltund,Duraludon,2022-01-03,0.0,2
+Boltund,Suicune Ludicolo,2022-01-03,1.0,1
+Boltund,Calyrex Inteleon,2022-01-03,0.0,1
+Boltund,Inteleon Inteleon,2022-01-03,0.0,1
+Boltund,Glaceon,2022-01-03,0.0,1
+Crabominable,Calyrex Inteleon,2022-01-03,1.0,1
+Crabominable,Duraludon,2022-01-03,0.0,1
+Crabominable,Jolteon Inteleon,2022-01-03,0.0,1
+Crabominable,Eternatus,2022-01-03,0.0,1
+Sableye,Victini,2022-01-03,0.0,1
+Sableye,Mew Genesect,2022-01-03,0.0,1
+Sableye,Umbreon Urshifu,2022-01-03,1.0,1
+Sableye,Lapras,2022-01-03,0.0,1
+Obstagoon Inteleon,Zacian,2022-01-03,0.0,1
+Obstagoon Inteleon,Mew Genesect,2022-01-03,1.0,1
+Obstagoon Inteleon,Duraludon,2022-01-03,0.0,2
+Tornadus,Mew Genesect,2022-01-03,0.0,1
+Decidueye Inteleon,Duraludon,2022-01-03,0.0,1
+Decidueye Inteleon,Urshifu Inteleon,2022-01-03,0.0,1
+Decidueye Inteleon,Victini,2022-01-03,0.0,1
+Galarian Weezing,Suicune Ludicolo,2022-01-03,0.0,1
+Galarian Weezing,Eternatus,2022-01-03,0.0,1
+Galarian Weezing,Mew Genesect,2022-01-03,0.0,1
+Flareon,Zacian,2022-01-03,0.0,1
+Flareon,Mew Genesect,2022-01-03,0.0,1
+Flareon,Eternatus,2022-01-03,0.0,1
+Metagross,Duraludon,2022-01-03,0.0,1
+Metagross,Single Strike Urshifu,2022-01-03,0.0,1
+Metagross,Mew Genesect,2022-01-03,0.0,1
+Metagross,Urshifu Inteleon,2022-01-03,0.0,1
+Calyrex Alcremie,Lapras,2022-01-03,0.0,1
+Calyrex Alcremie,Mew Genesect,2022-01-03,0.0,1
+Calyrex Alcremie,Duraludon,2022-01-03,0.0,1
+Calyrex Alcremie,Jolteon Inteleon,2022-01-03,0.0,1
+Zeraora,Umbreon Urshifu,2022-01-03,0.0,1
+Zeraora,Victini,2022-01-03,0.0,1
+Zeraora,Mew Genesect,2022-01-03,0.0,1
+Zeraora,Dark Box Inteleon,2022-01-03,0.0,1
+Mew Genesect,Jolteon Inteleon,2021-12-27,0.44,32
+Mew Genesect,Zacian,2021-12-27,0.5,10
+Mew Genesect,Mew Genesect,2021-12-27,0.5,128
+Mew Genesect,Leafeon,2021-12-27,0.5,4
+Mew Genesect,Eternatus,2021-12-27,0.4,10
+Mew Genesect,Urshifu Inteleon,2021-12-27,0.75,28
+Mew Genesect,Duraludon,2021-12-27,0.55,22
+Mew Genesect,Ice Rider Calyrex,2021-12-27,1.0,2
+Mew Genesect,Umbreon Urshifu,2021-12-27,0.41,32
+Mew Genesect,Rapid Strike Urshifu,2021-12-27,1.0,2
+Mew Genesect,Rayquaza,2021-12-27,1.0,2
+Mew Genesect,Durant,2021-12-27,1.0,2
+Mew Genesect,Dark Box Inteleon,2021-12-27,0.36,11
+Mew Genesect,Stonjourner,2021-12-27,0.8,5
+Mew Genesect,Rapid Strike Malamar,2021-12-27,0.25,8
+Mew Genesect,Suicune Inteleon,2021-12-27,0.33,6
+Mew Genesect,Leafeon Inteleon,2021-12-27,0.8,5
+Mew Genesect,Zeraora Inteleon,2021-12-27,1.0,2
+Mew Genesect,Hoopa Moltres,2021-12-27,0.12,8
+Mew Genesect,Victini,2021-12-27,0.5,18
+Mew Genesect,Dhelmise Rillaboom,2021-12-27,1.0,1
+Mew Genesect,Suicune Ludicolo,2021-12-27,0.75,4
+Mew Genesect,Calyrex Inteleon,2021-12-27,0.38,13
+Mew Genesect,Sylveon,2021-12-27,1.0,1
+Mew Genesect,Other,2021-12-27,0.64,14
+Mew Genesect,Gengar,2021-12-27,0.29,7
+Mew Genesect,Flareon,2021-12-27,1.0,2
+Mew Genesect,Single Strike Urshifu,2021-12-27,0.0,2
+Mew Genesect,Shadow Rider Calyrex,2021-12-27,0.0,1
+Mew Genesect,Galarian Weezing,2021-12-27,1.0,3
+Mew Genesect,Leafeon Moltres,2021-12-27,0.6,5
+Mew Genesect,Calyrex Alcremie,2021-12-27,1.0,2
+Mew Genesect,Obstagoon Inteleon,2021-12-27,0.5,2
+Mew Genesect,Orbeetle,2021-12-27,1.0,1
+Mew Genesect,Inteleon Inteleon,2021-12-27,0.75,4
+Mew Genesect,Victini Inteleon,2021-12-27,1.0,2
+Mew Genesect,Morpeko,2021-12-27,0.0,1
+Mew Genesect,Blissey,2021-12-27,0.0,2
+Mew Genesect,Alcremie,2021-12-27,1.0,1
+Mew Genesect,Dragapult Inteleon,2021-12-27,0.0,1
+Jolteon Inteleon,Umbreon Urshifu,2021-12-27,0.42,24
+Jolteon Inteleon,Victini,2021-12-27,0.27,11
+Jolteon Inteleon,Jolteon Inteleon,2021-12-27,0.48,46
+Jolteon Inteleon,Urshifu Inteleon,2021-12-27,0.23,13
+Jolteon Inteleon,Mew Genesect,2021-12-27,0.53,32
+Jolteon Inteleon,Calyrex Inteleon,2021-12-27,0.88,8
+Jolteon Inteleon,Duraludon,2021-12-27,0.8,10
+Jolteon Inteleon,Zacian,2021-12-27,0.67,6
+Jolteon Inteleon,Other,2021-12-27,0.57,7
+Jolteon Inteleon,Galarian Weezing,2021-12-27,0.6,5
+Jolteon Inteleon,Dark Box Inteleon,2021-12-27,0.67,6
+Jolteon Inteleon,Dragapult Inteleon,2021-12-27,0.33,3
+Jolteon Inteleon,Suicune Ludicolo,2021-12-27,0.75,8
+Jolteon Inteleon,Rapid Strike Urshifu,2021-12-27,0.0,1
+Jolteon Inteleon,Rayquaza,2021-12-27,1.0,2
+Jolteon Inteleon,Hoopa Moltres,2021-12-27,1.0,4
+Jolteon Inteleon,Inteleon Inteleon,2021-12-27,1.0,3
+Jolteon Inteleon,Rapid Strike Malamar,2021-12-27,0.8,5
+Jolteon Inteleon,Leafeon Inteleon,2021-12-27,0.67,6
+Jolteon Inteleon,Stonjourner,2021-12-27,0.0,2
+Jolteon Inteleon,Leafeon,2021-12-27,1.0,1
+Jolteon Inteleon,Flareon,2021-12-27,1.0,1
+Jolteon Inteleon,Calyrex Alcremie,2021-12-27,0.5,2
+Jolteon Inteleon,Decidueye Inteleon,2021-12-27,0.5,2
+Jolteon Inteleon,Morpeko,2021-12-27,0.5,2
+Jolteon Inteleon,Leafeon Moltres,2021-12-27,1.0,2
+Jolteon Inteleon,Eternatus,2021-12-27,0.0,2
+Jolteon Inteleon,Suicune Inteleon,2021-12-27,1.0,3
+Jolteon Inteleon,Shadow Rider Calyrex,2021-12-27,1.0,1
+Jolteon Inteleon,Obstagoon Inteleon,2021-12-27,1.0,1
+Jolteon Inteleon,Tornadus,2021-12-27,1.0,1
+Jolteon Inteleon,Lapras,2021-12-27,0.0,1
+Victini,Jolteon Inteleon,2021-12-27,0.73,11
+Victini,Leafeon Moltres,2021-12-27,1.0,1
+Victini,Urshifu Inteleon,2021-12-27,0.25,4
+Victini,Leafeon Inteleon,2021-12-27,1.0,1
+Victini,Hoopa Genesect,2021-12-27,1.0,1
+Victini,Umbreon Urshifu,2021-12-27,0.82,11
+Victini,Zacian,2021-12-27,0.75,4
+Victini,Calyrex Inteleon,2021-12-27,0.0,2
+Victini,Suicune Inteleon,2021-12-27,0.33,3
+Victini,Mew Genesect,2021-12-27,0.5,18
+Victini,Other,2021-12-27,0.0,1
+Victini,Leafeon,2021-12-27,0.5,2
+Victini,Suicune Ludicolo,2021-12-27,0.33,3
+Victini,Hoopa Moltres,2021-12-27,0.0,1
+Victini,Shadow Rider Calyrex,2021-12-27,0.5,2
+Victini,Duraludon,2021-12-27,1.0,2
+Victini,Rayquaza,2021-12-27,1.0,1
+Victini,Dark Box Inteleon,2021-12-27,0.0,1
+Victini,Lapras,2021-12-27,0.0,1
+Urshifu Inteleon,Inteleon Inteleon,2021-12-27,1.0,3
+Urshifu Inteleon,Mew Genesect,2021-12-27,0.25,28
+Urshifu Inteleon,Umbreon Urshifu,2021-12-27,0.28,18
+Urshifu Inteleon,Urshifu Inteleon,2021-12-27,0.5,16
+Urshifu Inteleon,Sylveon,2021-12-27,0.0,1
+Urshifu Inteleon,Gengar,2021-12-27,0.67,3
+Urshifu Inteleon,Duraludon,2021-12-27,0.4,10
+Urshifu Inteleon,Calyrex Inteleon,2021-12-27,0.83,6
+Urshifu Inteleon,Jolteon Inteleon,2021-12-27,0.77,13
+Urshifu Inteleon,Orbeetle,2021-12-27,1.0,1
+Urshifu Inteleon,Victini,2021-12-27,0.75,4
+Urshifu Inteleon,Rapid Strike Malamar,2021-12-27,0.33,3
+Urshifu Inteleon,Suicune Inteleon,2021-12-27,0.5,4
+Urshifu Inteleon,Eternatus,2021-12-27,0.86,7
+Urshifu Inteleon,Leafeon Inteleon,2021-12-27,1.0,1
+Urshifu Inteleon,Vikavolt,2021-12-27,1.0,1
+Urshifu Inteleon,Hoopa Moltres,2021-12-27,1.0,6
+Urshifu Inteleon,Rayquaza,2021-12-27,0.0,1
+Urshifu Inteleon,Hoopa Genesect,2021-12-27,0.0,1
+Urshifu Inteleon,Galarian Weezing,2021-12-27,0.5,2
+Urshifu Inteleon,Dhelmise Rillaboom,2021-12-27,1.0,2
+Urshifu Inteleon,Other,2021-12-27,1.0,2
+Urshifu Inteleon,Shadow Rider Calyrex,2021-12-27,1.0,1
+Urshifu Inteleon,Dark Box Inteleon,2021-12-27,0.75,4
+Urshifu Inteleon,Zacian,2021-12-27,0.33,3
+Urshifu Inteleon,Obstagoon Inteleon,2021-12-27,1.0,1
+Urshifu Inteleon,Lapras,2021-12-27,1.0,1
+Urshifu Inteleon,Suicune Ludicolo,2021-12-27,0.0,1
+Urshifu Inteleon,Leafeon,2021-12-27,1.0,1
+Duraludon,Umbreon Urshifu,2021-12-27,0.6,15
+Duraludon,Duraludon,2021-12-27,0.5,16
+Duraludon,Urshifu Inteleon,2021-12-27,0.6,10
+Duraludon,Rayquaza,2021-12-27,0.0,2
+Duraludon,Zacian,2021-12-27,1.0,3
+Duraludon,Blissey,2021-12-27,1.0,2
+Duraludon,Suicune Inteleon,2021-12-27,0.33,3
+Duraludon,Mew Genesect,2021-12-27,0.45,22
+Duraludon,Leafeon Inteleon,2021-12-27,0.33,3
+Duraludon,Shadow Rider Calyrex,2021-12-27,0.5,2
+Duraludon,Jolteon Inteleon,2021-12-27,0.2,10
+Duraludon,Gengar,2021-12-27,0.75,4
+Duraludon,Inteleon Inteleon,2021-12-27,0.25,4
+Duraludon,Hoopa Moltres,2021-12-27,1.0,2
+Duraludon,Other,2021-12-27,0.4,5
+Duraludon,Victini Inteleon,2021-12-27,0.0,1
+Duraludon,Lapras,2021-12-27,0.0,1
+Duraludon,Calyrex Inteleon,2021-12-27,0.5,4
+Duraludon,Ice Rider Calyrex,2021-12-27,1.0,1
+Duraludon,Galarian Weezing,2021-12-27,1.0,2
+Duraludon,Suicune Ludicolo,2021-12-27,0.33,3
+Duraludon,Stonjourner,2021-12-27,1.0,1
+Duraludon,Rapid Strike Malamar,2021-12-27,0.5,2
+Duraludon,Dark Box Inteleon,2021-12-27,0.5,2
+Duraludon,Zeraora Inteleon,2021-12-27,1.0,1
+Duraludon,Victini,2021-12-27,0.0,2
+Duraludon,Single Strike Urshifu,2021-12-27,1.0,1
+Duraludon,Eternatus,2021-12-27,1.0,1
+Duraludon,Alcremie,2021-12-27,0.5,2
+Duraludon,Decidueye Inteleon,2021-12-27,0.0,1
+Duraludon,Leafeon Moltres,2021-12-27,0.0,2
+Umbreon Urshifu,Urshifu Inteleon,2021-12-27,0.72,18
+Umbreon Urshifu,Dragapult Inteleon,2021-12-27,0.0,1
+Umbreon Urshifu,Mew Genesect,2021-12-27,0.56,32
+Umbreon Urshifu,Jolteon Inteleon,2021-12-27,0.58,24
+Umbreon Urshifu,Calyrex Inteleon,2021-12-27,0.4,10
+Umbreon Urshifu,Zacian,2021-12-27,0.5,8
+Umbreon Urshifu,Gengar,2021-12-27,0.17,6
+Umbreon Urshifu,Victini,2021-12-27,0.18,11
+Umbreon Urshifu,Sylveon,2021-12-27,0.67,3
+Umbreon Urshifu,Rapid Strike Malamar,2021-12-27,0.6,5
+Umbreon Urshifu,Dark Box Inteleon,2021-12-27,0.3,10
+Umbreon Urshifu,Other,2021-12-27,0.33,3
+Umbreon Urshifu,Calyrex Alcremie,2021-12-27,1.0,2
+Umbreon Urshifu,Duraludon,2021-12-27,0.4,15
+Umbreon Urshifu,Obstagoon Inteleon,2021-12-27,0.0,2
+Umbreon Urshifu,Suicune Ludicolo,2021-12-27,0.4,5
+Umbreon Urshifu,Decidueye Inteleon,2021-12-27,0.67,3
+Umbreon Urshifu,Hoopa Moltres,2021-12-27,0.4,5
+Umbreon Urshifu,Umbreon Urshifu,2021-12-27,0.5,32
+Umbreon Urshifu,Suicune Inteleon,2021-12-27,0.5,6
+Umbreon Urshifu,Inteleon Inteleon,2021-12-27,1.0,1
+Umbreon Urshifu,Stonjourner,2021-12-27,0.33,3
+Umbreon Urshifu,Eternatus,2021-12-27,0.5,2
+Umbreon Urshifu,Flareon,2021-12-27,1.0,1
+Umbreon Urshifu,Leafeon Inteleon,2021-12-27,1.0,1
+Umbreon Urshifu,Hoopa Genesect,2021-12-27,0.67,3
+Umbreon Urshifu,Shadow Rider Calyrex,2021-12-27,1.0,1
+Umbreon Urshifu,Tornadus,2021-12-27,0.5,2
+Umbreon Urshifu,Leafeon,2021-12-27,1.0,1
+Umbreon Urshifu,Gengar Umbreon,2021-12-27,0.5,2
+Umbreon Urshifu,Lapras,2021-12-27,0.0,1
+Umbreon Urshifu,Victini Inteleon,2021-12-27,0.0,1
+Umbreon Urshifu,Alcremie,2021-12-27,0.33,3
+Umbreon Urshifu,Zeraora Inteleon,2021-12-27,0.5,2
+Umbreon Urshifu,Blissey,2021-12-27,0.0,1
+Dark Box Inteleon,Umbreon Urshifu,2021-12-27,0.6,10
+Dark Box Inteleon,Inteleon Inteleon,2021-12-27,0.33,3
+Dark Box Inteleon,Single Strike Urshifu,2021-12-27,1.0,1
+Dark Box Inteleon,Mew Genesect,2021-12-27,0.64,11
+Dark Box Inteleon,Jolteon Inteleon,2021-12-27,0.33,6
+Dark Box Inteleon,Stonjourner,2021-12-27,1.0,3
+Dark Box Inteleon,Tornadus,2021-12-27,1.0,1
+Dark Box Inteleon,Hoopa Genesect,2021-12-27,1.0,1
+Dark Box Inteleon,Urshifu Inteleon,2021-12-27,0.0,4
+Dark Box Inteleon,Eternatus,2021-12-27,0.0,1
+Dark Box Inteleon,Duraludon,2021-12-27,0.5,2
+Dark Box Inteleon,Suicune Ludicolo,2021-12-27,1.0,1
+Dark Box Inteleon,Hoopa Moltres,2021-12-27,1.0,1
+Dark Box Inteleon,Calyrex Inteleon,2021-12-27,0.5,4
+Dark Box Inteleon,Victini,2021-12-27,1.0,1
+Dark Box Inteleon,Zeraora Inteleon,2021-12-27,0.0,1
+Calyrex Inteleon,Zacian,2021-12-27,1.0,1
+Calyrex Inteleon,Blissey,2021-12-27,1.0,1
+Calyrex Inteleon,Suicune Ludicolo,2021-12-27,0.0,2
+Calyrex Inteleon,Umbreon Urshifu,2021-12-27,0.5,10
+Calyrex Inteleon,Victini Inteleon,2021-12-27,1.0,1
+Calyrex Inteleon,Vikavolt,2021-12-27,1.0,1
+Calyrex Inteleon,Other,2021-12-27,0.67,3
+Calyrex Inteleon,Flareon,2021-12-27,1.0,1
+Calyrex Inteleon,Jolteon Inteleon,2021-12-27,0.12,8
+Calyrex Inteleon,Urshifu Inteleon,2021-12-27,0.17,6
+Calyrex Inteleon,Stonjourner,2021-12-27,0.0,1
+Calyrex Inteleon,Suicune Inteleon,2021-12-27,0.33,3
+Calyrex Inteleon,Victini,2021-12-27,1.0,2
+Calyrex Inteleon,Mew Genesect,2021-12-27,0.62,13
+Calyrex Inteleon,Shadow Rider Calyrex,2021-12-27,0.5,2
+Calyrex Inteleon,Dragapult Inteleon,2021-12-27,0.0,2
+Calyrex Inteleon,Gengar,2021-12-27,0.5,2
+Calyrex Inteleon,Rapid Strike Urshifu,2021-12-27,1.0,1
+Calyrex Inteleon,Rapid Strike Malamar,2021-12-27,0.67,3
+Calyrex Inteleon,Duraludon,2021-12-27,0.5,4
+Calyrex Inteleon,Calyrex Alcremie,2021-12-27,1.0,1
+Calyrex Inteleon,Hoopa Moltres,2021-12-27,0.0,2
+Calyrex Inteleon,Leafeon,2021-12-27,1.0,1
+Calyrex Inteleon,Dark Box Inteleon,2021-12-27,0.5,4
+Calyrex Inteleon,Leafeon Inteleon,2021-12-27,0.0,1
+Calyrex Inteleon,Lapras,2021-12-27,1.0,2
+Calyrex Inteleon,Gengar Umbreon,2021-12-27,1.0,1
+Calyrex Inteleon,Zeraora Inteleon,2021-12-27,1.0,1
+Calyrex Inteleon,Decidueye Inteleon,2021-12-27,1.0,1
+Gengar,Dragapult Inteleon,2021-12-27,0.5,2
+Gengar,Suicune Inteleon,2021-12-27,0.0,1
+Gengar,Urshifu Inteleon,2021-12-27,0.33,3
+Gengar,Umbreon Urshifu,2021-12-27,0.83,6
+Gengar,Mew Genesect,2021-12-27,0.71,7
+Gengar,Duraludon,2021-12-27,0.25,4
+Gengar,Lapras,2021-12-27,0.0,1
+Gengar,Eternatus,2021-12-27,1.0,1
+Gengar,Hoopa Moltres,2021-12-27,0.5,2
+Gengar,Galarian Weezing,2021-12-27,0.5,2
+Gengar,Calyrex Inteleon,2021-12-27,0.5,2
+Gengar,Rapid Strike Malamar,2021-12-27,0.0,1
+Gengar,Tornadus,2021-12-27,1.0,1
+Gengar,Leafeon Moltres,2021-12-27,0.0,1
+Hoopa Moltres,Hoopa Moltres,2021-12-27,0.5,4
+Hoopa Moltres,Eternatus,2021-12-27,0.0,1
+Hoopa Moltres,Rapid Strike Malamar,2021-12-27,1.0,2
+Hoopa Moltres,Other,2021-12-27,1.0,2
+Hoopa Moltres,Urshifu Inteleon,2021-12-27,0.0,6
+Hoopa Moltres,Duraludon,2021-12-27,0.0,2
+Hoopa Moltres,Mew Genesect,2021-12-27,0.88,8
+Hoopa Moltres,Umbreon Urshifu,2021-12-27,0.6,5
+Hoopa Moltres,Jolteon Inteleon,2021-12-27,0.0,4
+Hoopa Moltres,Victini,2021-12-27,1.0,1
+Hoopa Moltres,Gengar,2021-12-27,0.5,2
+Hoopa Moltres,Lapras,2021-12-27,1.0,1
+Hoopa Moltres,Leafeon Moltres,2021-12-27,1.0,1
+Hoopa Moltres,Inteleon Inteleon,2021-12-27,0.0,1
+Hoopa Moltres,Calyrex Inteleon,2021-12-27,1.0,2
+Hoopa Moltres,Dark Box Inteleon,2021-12-27,0.0,1
+Hoopa Moltres,Galarian Weezing,2021-12-27,1.0,1
+Hoopa Moltres,Leafeon Inteleon,2021-12-27,1.0,1
+Hoopa Moltres,Dragapult Inteleon,2021-12-27,1.0,1
+Hoopa Moltres,Zacian,2021-12-27,0.0,1
+Suicune Inteleon,Gengar,2021-12-27,1.0,1
+Suicune Inteleon,Duraludon,2021-12-27,0.67,3
+Suicune Inteleon,Urshifu Inteleon,2021-12-27,0.5,4
+Suicune Inteleon,Mew Genesect,2021-12-27,0.67,6
+Suicune Inteleon,Eternatus,2021-12-27,1.0,2
+Suicune Inteleon,Victini,2021-12-27,0.67,3
+Suicune Inteleon,Umbreon Urshifu,2021-12-27,0.5,6
+Suicune Inteleon,Zacian,2021-12-27,0.0,2
+Suicune Inteleon,Calyrex Inteleon,2021-12-27,0.67,3
+Suicune Inteleon,Inteleon Inteleon,2021-12-27,1.0,1
+Suicune Inteleon,Jolteon Inteleon,2021-12-27,0.0,3
+Suicune Inteleon,Rapid Strike Malamar,2021-12-27,1.0,1
+Suicune Inteleon,Gengar Umbreon,2021-12-27,0.0,1
+Suicune Inteleon,Suicune Ludicolo,2021-12-27,1.0,1
+Suicune Inteleon,Suicune Inteleon,2021-12-27,0.5,4
+Suicune Ludicolo,Gengar Umbreon,2021-12-27,1.0,2
+Suicune Ludicolo,Umbreon Urshifu,2021-12-27,0.6,5
+Suicune Ludicolo,Other,2021-12-27,1.0,2
+Suicune Ludicolo,Calyrex Inteleon,2021-12-27,1.0,2
+Suicune Ludicolo,Jolteon Inteleon,2021-12-27,0.25,8
+Suicune Ludicolo,Victini,2021-12-27,0.67,3
+Suicune Ludicolo,Mew Genesect,2021-12-27,0.25,4
+Suicune Ludicolo,Leafeon Inteleon,2021-12-27,0.5,2
+Suicune Ludicolo,Duraludon,2021-12-27,0.33,3
+Suicune Ludicolo,Shadow Rider Calyrex,2021-12-27,1.0,2
+Suicune Ludicolo,Dark Box Inteleon,2021-12-27,0.0,1
+Suicune Ludicolo,Obstagoon Inteleon,2021-12-27,0.0,1
+Suicune Ludicolo,Urshifu Inteleon,2021-12-27,1.0,1
+Suicune Ludicolo,Zacian,2021-12-27,1.0,2
+Suicune Ludicolo,Suicune Inteleon,2021-12-27,0.0,1
+Lapras,Gengar,2021-12-27,1.0,1
+Lapras,Duraludon,2021-12-27,1.0,1
+Lapras,Hoopa Moltres,2021-12-27,0.0,1
+Lapras,Umbreon Urshifu,2021-12-27,1.0,1
+Lapras,Rayquaza,2021-12-27,1.0,1
+Lapras,Urshifu Inteleon,2021-12-27,0.0,1
+Lapras,Calyrex Inteleon,2021-12-27,0.0,2
+Lapras,Other,2021-12-27,1.0,1
+Lapras,Victini,2021-12-27,1.0,1
+Lapras,Jolteon Inteleon,2021-12-27,1.0,1
+Zacian,Jolteon Inteleon,2021-12-27,0.33,6
+Zacian,Mew Genesect,2021-12-27,0.5,10
+Zacian,Umbreon Urshifu,2021-12-27,0.38,8
+Zacian,Galarian Weezing,2021-12-27,1.0,2
+Zacian,Calyrex Inteleon,2021-12-27,0.0,1
+Zacian,Duraludon,2021-12-27,0.0,3
+Zacian,Dragapult Inteleon,2021-12-27,1.0,2
+Zacian,Leafeon Moltres,2021-12-27,0.0,1
+Zacian,Blissey,2021-12-27,0.0,1
+Zacian,Zacian,2021-12-27,0.5,4
+Zacian,Victini,2021-12-27,0.25,4
+Zacian,Suicune Inteleon,2021-12-27,1.0,2
+Zacian,Inteleon Inteleon,2021-12-27,0.0,1
+Zacian,Rapid Strike Malamar,2021-12-27,0.0,1
+Zacian,Other,2021-12-27,0.5,2
+Zacian,Flareon,2021-12-27,1.0,1
+Zacian,Stonjourner,2021-12-27,0.33,3
+Zacian,Leafeon Inteleon,2021-12-27,0.0,1
+Zacian,Shadow Rider Calyrex,2021-12-27,0.0,1
+Zacian,Urshifu Inteleon,2021-12-27,0.67,3
+Zacian,Eternatus,2021-12-27,0.0,1
+Zacian,Suicune Ludicolo,2021-12-27,0.0,2
+Zacian,Alcremie,2021-12-27,0.0,1
+Zacian,Hoopa Moltres,2021-12-27,1.0,1
+Eternatus,Suicune Inteleon,2021-12-27,0.0,2
+Eternatus,Mew Genesect,2021-12-27,0.6,10
+Eternatus,Hoopa Genesect,2021-12-27,0.0,1
+Eternatus,Inteleon Inteleon,2021-12-27,0.0,1
+Eternatus,Hoopa Moltres,2021-12-27,1.0,1
+Eternatus,Urshifu Inteleon,2021-12-27,0.14,7
+Eternatus,Gengar,2021-12-27,0.0,1
+Eternatus,Umbreon Urshifu,2021-12-27,0.5,2
+Eternatus,Blissey,2021-12-27,0.0,2
+Eternatus,Dark Box Inteleon,2021-12-27,0.0,1
+Eternatus,Jolteon Inteleon,2021-12-27,0.5,2
+Eternatus,Zacian,2021-12-27,1.0,1
+Eternatus,Duraludon,2021-12-27,0.0,1
+Leafeon Moltres,Shadow Rider Calyrex,2021-12-27,1.0,1
+Leafeon Moltres,Victini,2021-12-27,0.0,1
+Leafeon Moltres,Galarian Weezing,2021-12-27,0.0,1
+Leafeon Moltres,Zacian,2021-12-27,1.0,1
+Leafeon Moltres,Mew Genesect,2021-12-27,0.4,5
+Leafeon Moltres,Other,2021-12-27,1.0,1
+Leafeon Moltres,Hoopa Moltres,2021-12-27,0.0,1
+Leafeon Moltres,Jolteon Inteleon,2021-12-27,0.0,2
+Leafeon Moltres,Duraludon,2021-12-27,1.0,2
+Leafeon Moltres,Gengar,2021-12-27,1.0,1
+Rapid Strike Malamar,Morpeko,2021-12-27,1.0,1
+Rapid Strike Malamar,Hoopa Moltres,2021-12-27,0.0,2
+Rapid Strike Malamar,Urshifu Inteleon,2021-12-27,0.67,3
+Rapid Strike Malamar,Stonjourner,2021-12-27,1.0,1
+Rapid Strike Malamar,Mew Genesect,2021-12-27,0.5,8
+Rapid Strike Malamar,Umbreon Urshifu,2021-12-27,0.4,5
+Rapid Strike Malamar,Jolteon Inteleon,2021-12-27,0.2,5
+Rapid Strike Malamar,Rayquaza,2021-12-27,1.0,2
+Rapid Strike Malamar,Zacian,2021-12-27,1.0,1
+Rapid Strike Malamar,Galarian Weezing,2021-12-27,0.0,2
+Rapid Strike Malamar,Calyrex Inteleon,2021-12-27,0.33,3
+Rapid Strike Malamar,Gengar,2021-12-27,1.0,1
+Rapid Strike Malamar,Duraludon,2021-12-27,0.5,2
+Rapid Strike Malamar,Other,2021-12-27,0.0,1
+Rapid Strike Malamar,Decidueye Inteleon,2021-12-27,0.0,1
+Rapid Strike Malamar,Suicune Inteleon,2021-12-27,0.0,1
+Rapid Strike Malamar,Shadow Rider Calyrex,2021-12-27,0.0,1
+Rapid Strike Malamar,Rapid Strike Malamar,2021-12-27,0.5,4
+Zeraora Inteleon,Inteleon Inteleon,2021-12-27,1.0,1
+Zeraora Inteleon,Mew Genesect,2021-12-27,0.0,2
+Zeraora Inteleon,Stonjourner,2021-12-27,0.0,1
+Zeraora Inteleon,Sylveon,2021-12-27,1.0,1
+Zeraora Inteleon,Orbeetle,2021-12-27,1.0,1
+Zeraora Inteleon,Duraludon,2021-12-27,0.0,1
+Zeraora Inteleon,Umbreon Urshifu,2021-12-27,0.5,2
+Zeraora Inteleon,Leafeon Inteleon,2021-12-27,1.0,1
+Zeraora Inteleon,Dark Box Inteleon,2021-12-27,1.0,1
+Zeraora Inteleon,Calyrex Inteleon,2021-12-27,0.0,1
+Dragapult Inteleon,Umbreon Urshifu,2021-12-27,1.0,1
+Dragapult Inteleon,Gengar,2021-12-27,0.5,2
+Dragapult Inteleon,Zacian,2021-12-27,0.0,2
+Dragapult Inteleon,Jolteon Inteleon,2021-12-27,0.67,3
+Dragapult Inteleon,Calyrex Inteleon,2021-12-27,1.0,2
+Dragapult Inteleon,Mew Genesect,2021-12-27,1.0,1
+Dragapult Inteleon,Hoopa Moltres,2021-12-27,0.0,1
+Alcremie,Decidueye Inteleon,2021-12-27,0.0,1
+Alcremie,Other,2021-12-27,0.5,2
+Alcremie,Rayquaza,2021-12-27,1.0,1
+Alcremie,Mew Genesect,2021-12-27,0.0,1
+Alcremie,Umbreon Urshifu,2021-12-27,0.33,3
+Alcremie,Duraludon,2021-12-27,0.5,2
+Alcremie,Blissey,2021-12-27,1.0,1
+Alcremie,Zacian,2021-12-27,0.0,1
+Other,Leafeon,2021-12-27,0.0,1
+Other,Jolteon Inteleon,2021-12-27,0.43,7
+Other,Suicune Ludicolo,2021-12-27,0.0,2
+Other,Galarian Weezing,2021-12-27,0.33,3
+Other,Tornadus,2021-12-27,0.0,1
+Other,Calyrex Inteleon,2021-12-27,0.33,3
+Other,Hoopa Moltres,2021-12-27,0.0,2
+Other,Other,2021-12-27,0.5,4
+Other,Shadow Rider Calyrex,2021-12-27,0.0,1
+Other,Umbreon Urshifu,2021-12-27,0.67,3
+Other,Hoopa Genesect,2021-12-27,0.0,1
+Other,Victini,2021-12-27,1.0,1
+Other,Mew Genesect,2021-12-27,0.36,14
+Other,Duraludon,2021-12-27,0.6,5
+Other,Alcremie,2021-12-27,0.0,2
+Other,Durant,2021-12-27,0.5,2
+Other,Urshifu Inteleon,2021-12-27,0.0,2
+Other,Zacian,2021-12-27,0.5,2
+Other,Leafeon Moltres,2021-12-27,0.0,1
+Other,Rapid Strike Malamar,2021-12-27,1.0,1
+Other,Inteleon Inteleon,2021-12-27,0.0,1
+Other,Obstagoon Inteleon,2021-12-27,1.0,1
+Other,Lapras,2021-12-27,0.0,1
+Leafeon Inteleon,Leafeon Inteleon,2021-12-27,0.5,4
+Leafeon Inteleon,Duraludon,2021-12-27,0.67,3
+Leafeon Inteleon,Mew Genesect,2021-12-27,0.2,5
+Leafeon Inteleon,Dhelmise Rillaboom,2021-12-27,0.0,1
+Leafeon Inteleon,Galarian Weezing,2021-12-27,0.5,2
+Leafeon Inteleon,Victini,2021-12-27,0.0,1
+Leafeon Inteleon,Calyrex Alcremie,2021-12-27,0.0,2
+Leafeon Inteleon,Flareon,2021-12-27,0.0,1
+Leafeon Inteleon,Jolteon Inteleon,2021-12-27,0.33,6
+Leafeon Inteleon,Urshifu Inteleon,2021-12-27,0.0,1
+Leafeon Inteleon,Tornadus,2021-12-27,0.0,1
+Leafeon Inteleon,Gengar Umbreon,2021-12-27,1.0,1
+Leafeon Inteleon,Suicune Ludicolo,2021-12-27,0.5,2
+Leafeon Inteleon,Umbreon Urshifu,2021-12-27,0.0,1
+Leafeon Inteleon,Rayquaza,2021-12-27,0.0,1
+Leafeon Inteleon,Zacian,2021-12-27,0.0,1
+Leafeon Inteleon,Decidueye Inteleon,2021-12-27,1.0,1
+Leafeon Inteleon,Calyrex Inteleon,2021-12-27,1.0,1
+Leafeon Inteleon,Hoopa Moltres,2021-12-27,0.0,1
+Leafeon Inteleon,Zeraora Inteleon,2021-12-27,0.0,1
+Decidueye Inteleon,Alcremie,2021-12-27,1.0,1
+Decidueye Inteleon,Umbreon Urshifu,2021-12-27,0.33,3
+Decidueye Inteleon,Jolteon Inteleon,2021-12-27,0.5,2
+Decidueye Inteleon,Leafeon Inteleon,2021-12-27,0.0,1
+Decidueye Inteleon,Rapid Strike Malamar,2021-12-27,1.0,1
+Decidueye Inteleon,Duraludon,2021-12-27,1.0,1
+Decidueye Inteleon,Calyrex Inteleon,2021-12-27,0.0,1
+Inteleon Inteleon,Zeraora Inteleon,2021-12-27,0.0,1
+Inteleon Inteleon,Eternatus,2021-12-27,1.0,1
+Inteleon Inteleon,Urshifu Inteleon,2021-12-27,0.0,3
+Inteleon Inteleon,Dark Box Inteleon,2021-12-27,0.67,3
+Inteleon Inteleon,Duraludon,2021-12-27,0.75,4
+Inteleon Inteleon,Jolteon Inteleon,2021-12-27,0.0,3
+Inteleon Inteleon,Zacian,2021-12-27,1.0,1
+Inteleon Inteleon,Umbreon Urshifu,2021-12-27,0.0,1
+Inteleon Inteleon,Galarian Weezing,2021-12-27,0.0,1
+Inteleon Inteleon,Mew Genesect,2021-12-27,0.25,4
+Inteleon Inteleon,Hoopa Moltres,2021-12-27,1.0,1
+Inteleon Inteleon,Suicune Inteleon,2021-12-27,0.0,1
+Inteleon Inteleon,Other,2021-12-27,1.0,1
+Inteleon Inteleon,Morpeko,2021-12-27,1.0,1
+Inteleon Inteleon,Shadow Rider Calyrex,2021-12-27,1.0,1
+Blissey,Duraludon,2021-12-27,0.0,2
+Blissey,Calyrex Inteleon,2021-12-27,0.0,1
+Blissey,Zacian,2021-12-27,1.0,1
+Blissey,Shadow Rider Calyrex,2021-12-27,0.0,1
+Blissey,Eternatus,2021-12-27,1.0,2
+Blissey,Orbeetle,2021-12-27,0.0,1
+Blissey,Mew Genesect,2021-12-27,1.0,2
+Blissey,Umbreon Urshifu,2021-12-27,0.0,1
+Blissey,Alcremie,2021-12-27,0.0,1
+Galarian Weezing,Jolteon Inteleon,2021-12-27,0.4,5
+Galarian Weezing,Leafeon Inteleon,2021-12-27,0.5,2
+Galarian Weezing,Other,2021-12-27,0.67,3
+Galarian Weezing,Zacian,2021-12-27,0.0,2
+Galarian Weezing,Urshifu Inteleon,2021-12-27,0.5,2
+Galarian Weezing,Leafeon Moltres,2021-12-27,1.0,1
+Galarian Weezing,Inteleon Inteleon,2021-12-27,1.0,1
+Galarian Weezing,Rapid Strike Malamar,2021-12-27,1.0,2
+Galarian Weezing,Gengar,2021-12-27,0.5,2
+Galarian Weezing,Mew Genesect,2021-12-27,0.0,3
+Galarian Weezing,Duraludon,2021-12-27,0.0,2
+Galarian Weezing,Hoopa Moltres,2021-12-27,0.0,1
+Obstagoon Inteleon,Umbreon Urshifu,2021-12-27,1.0,2
+Obstagoon Inteleon,Mew Genesect,2021-12-27,0.5,2
+Obstagoon Inteleon,Suicune Ludicolo,2021-12-27,1.0,1
+Obstagoon Inteleon,Urshifu Inteleon,2021-12-27,0.0,1
+Obstagoon Inteleon,Jolteon Inteleon,2021-12-27,0.0,1
+Obstagoon Inteleon,Other,2021-12-27,0.0,1
+Shadow Rider Calyrex,Other,2021-12-27,1.0,1
+Shadow Rider Calyrex,Duraludon,2021-12-27,0.5,2
+Shadow Rider Calyrex,Leafeon Moltres,2021-12-27,0.0,1
+Shadow Rider Calyrex,Calyrex Inteleon,2021-12-27,0.5,2
+Shadow Rider Calyrex,Gengar Umbreon,2021-12-27,0.0,1
+Shadow Rider Calyrex,Sylveon,2021-12-27,1.0,1
+Shadow Rider Calyrex,Urshifu Inteleon,2021-12-27,0.0,1
+Shadow Rider Calyrex,Mew Genesect,2021-12-27,1.0,1
+Shadow Rider Calyrex,Blissey,2021-12-27,1.0,1
+Shadow Rider Calyrex,Umbreon Urshifu,2021-12-27,0.0,1
+Shadow Rider Calyrex,Suicune Ludicolo,2021-12-27,0.0,2
+Shadow Rider Calyrex,Victini,2021-12-27,0.0,2
+Shadow Rider Calyrex,Zacian,2021-12-27,1.0,1
+Shadow Rider Calyrex,Jolteon Inteleon,2021-12-27,0.0,1
+Shadow Rider Calyrex,Rapid Strike Malamar,2021-12-27,1.0,1
+Shadow Rider Calyrex,Inteleon Inteleon,2021-12-27,0.0,1
+Stonjourner,Mew Genesect,2021-12-27,0.2,5
+Stonjourner,Calyrex Inteleon,2021-12-27,1.0,1
+Stonjourner,Rapid Strike Malamar,2021-12-27,0.0,1
+Stonjourner,Dark Box Inteleon,2021-12-27,0.0,3
+Stonjourner,Umbreon Urshifu,2021-12-27,0.67,3
+Stonjourner,Jolteon Inteleon,2021-12-27,1.0,2
+Stonjourner,Zeraora Inteleon,2021-12-27,1.0,1
+Stonjourner,Zacian,2021-12-27,0.67,3
+Stonjourner,Duraludon,2021-12-27,0.0,1
+Tornadus,Other,2021-12-27,1.0,1
+Tornadus,Leafeon Inteleon,2021-12-27,1.0,1
+Tornadus,Dark Box Inteleon,2021-12-27,0.0,1
+Tornadus,Umbreon Urshifu,2021-12-27,0.5,2
+Tornadus,Gengar,2021-12-27,0.0,1
+Tornadus,Calyrex Alcremie,2021-12-27,1.0,1
+Tornadus,Jolteon Inteleon,2021-12-27,0.0,1
+Rayquaza,Mew Genesect,2021-12-27,0.0,2
+Rayquaza,Duraludon,2021-12-27,1.0,2
+Rayquaza,Urshifu Inteleon,2021-12-27,1.0,1
+Rayquaza,Jolteon Inteleon,2021-12-27,0.0,2
+Rayquaza,Rapid Strike Malamar,2021-12-27,0.0,2
+Rayquaza,Leafeon Inteleon,2021-12-27,1.0,1
+Rayquaza,Hoopa Genesect,2021-12-27,1.0,1
+Rayquaza,Alcremie,2021-12-27,0.0,1
+Rayquaza,Lapras,2021-12-27,0.0,1
+Rayquaza,Victini,2021-12-27,0.0,1
+Victini Inteleon,Calyrex Inteleon,2021-12-27,0.0,1
+Victini Inteleon,Duraludon,2021-12-27,1.0,1
+Victini Inteleon,Single Strike Urshifu,2021-12-27,1.0,1
+Victini Inteleon,Mew Genesect,2021-12-27,0.0,2
+Victini Inteleon,Umbreon Urshifu,2021-12-27,1.0,1
+Victini Inteleon,Hoopa Genesect,2021-12-27,1.0,1
+Hoopa Genesect,Victini,2021-12-27,0.0,1
+Hoopa Genesect,Eternatus,2021-12-27,1.0,1
+Hoopa Genesect,Urshifu Inteleon,2021-12-27,1.0,1
+Hoopa Genesect,Other,2021-12-27,1.0,1
+Hoopa Genesect,Rayquaza,2021-12-27,0.0,1
+Hoopa Genesect,Dark Box Inteleon,2021-12-27,0.0,1
+Hoopa Genesect,Umbreon Urshifu,2021-12-27,0.33,3
+Hoopa Genesect,Victini Inteleon,2021-12-27,0.0,1
+Leafeon,Other,2021-12-27,1.0,1
+Leafeon,Mew Genesect,2021-12-27,0.5,4
+Leafeon,Victini,2021-12-27,0.5,2
+Leafeon,Jolteon Inteleon,2021-12-27,0.0,1
+Leafeon,Umbreon Urshifu,2021-12-27,0.0,1
+Leafeon,Single Strike Urshifu,2021-12-27,1.0,1
+Leafeon,Calyrex Inteleon,2021-12-27,0.0,1
+Leafeon,Urshifu Inteleon,2021-12-27,0.0,1
+Gengar Umbreon,Suicune Ludicolo,2021-12-27,0.0,2
+Gengar Umbreon,Shadow Rider Calyrex,2021-12-27,1.0,1
+Gengar Umbreon,Leafeon Inteleon,2021-12-27,0.0,1
+Gengar Umbreon,Umbreon Urshifu,2021-12-27,0.5,2
+Gengar Umbreon,Suicune Inteleon,2021-12-27,1.0,1
+Gengar Umbreon,Calyrex Inteleon,2021-12-27,0.0,1
+Orbeetle,Urshifu Inteleon,2021-12-27,0.0,1
+Orbeetle,Morpeko,2021-12-27,1.0,1
+Orbeetle,Mew Genesect,2021-12-27,0.0,1
+Orbeetle,Blissey,2021-12-27,1.0,1
+Orbeetle,Zeraora Inteleon,2021-12-27,0.0,1
+Morpeko,Rapid Strike Malamar,2021-12-27,0.0,1
+Morpeko,Orbeetle,2021-12-27,0.0,1
+Morpeko,Jolteon Inteleon,2021-12-27,0.5,2
+Morpeko,Mew Genesect,2021-12-27,1.0,1
+Morpeko,Inteleon Inteleon,2021-12-27,0.0,1
+Calyrex Alcremie,Flareon,2021-12-27,1.0,1
+Calyrex Alcremie,Umbreon Urshifu,2021-12-27,0.0,2
+Calyrex Alcremie,Leafeon Inteleon,2021-12-27,1.0,2
+Calyrex Alcremie,Mew Genesect,2021-12-27,0.0,2
+Calyrex Alcremie,Jolteon Inteleon,2021-12-27,0.5,2
+Calyrex Alcremie,Calyrex Inteleon,2021-12-27,0.0,1
+Calyrex Alcremie,Tornadus,2021-12-27,0.0,1
+Single Strike Urshifu,Dark Box Inteleon,2021-12-27,0.0,1
+Single Strike Urshifu,Mew Genesect,2021-12-27,1.0,2
+Single Strike Urshifu,Victini Inteleon,2021-12-27,0.0,1
+Single Strike Urshifu,Leafeon,2021-12-27,0.0,1
+Single Strike Urshifu,Duraludon,2021-12-27,0.0,1
+Sylveon,Urshifu Inteleon,2021-12-27,1.0,1
+Sylveon,Umbreon Urshifu,2021-12-27,0.33,3
+Sylveon,Mew Genesect,2021-12-27,0.0,1
+Sylveon,Shadow Rider Calyrex,2021-12-27,0.0,1
+Sylveon,Zeraora Inteleon,2021-12-27,0.0,1
+Dhelmise Rillaboom,Leafeon Inteleon,2021-12-27,1.0,1
+Dhelmise Rillaboom,Mew Genesect,2021-12-27,0.0,1
+Dhelmise Rillaboom,Urshifu Inteleon,2021-12-27,0.0,2
+Rapid Strike Urshifu,Mew Genesect,2021-12-27,0.0,2
+Rapid Strike Urshifu,Jolteon Inteleon,2021-12-27,1.0,1
+Rapid Strike Urshifu,Calyrex Inteleon,2021-12-27,0.0,1
+Flareon,Calyrex Alcremie,2021-12-27,0.0,1
+Flareon,Calyrex Inteleon,2021-12-27,0.0,1
+Flareon,Mew Genesect,2021-12-27,0.0,2
+Flareon,Leafeon Inteleon,2021-12-27,1.0,1
+Flareon,Jolteon Inteleon,2021-12-27,0.0,1
+Flareon,Umbreon Urshifu,2021-12-27,0.0,1
+Flareon,Zacian,2021-12-27,0.0,1
+Durant,Mew Genesect,2021-12-27,0.0,2
+Durant,Other,2021-12-27,0.5,2
+Ice Rider Calyrex,Mew Genesect,2021-12-27,0.0,2
+Ice Rider Calyrex,Duraludon,2021-12-27,0.0,1
+Vikavolt,Calyrex Inteleon,2021-12-27,0.0,1
+Vikavolt,Urshifu Inteleon,2021-12-27,0.0,1
 Jolteon Inteleon,Mew Genesect,2022-01-10,0.47,40
 Jolteon Inteleon,Jolteon Inteleon,2022-01-10,0.47,80
 Jolteon Inteleon,Calyrex Alcremie,2022-01-10,1.0,1
