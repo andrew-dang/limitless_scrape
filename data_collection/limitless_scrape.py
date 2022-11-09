@@ -354,18 +354,18 @@ def scrape_for_dates_and_url():
     # Get date and tournament url; found in first column of table
     for row_i, row in enumerate(completed.find_all('tr')[1:], start=0):
         data = row.find_all('td')
-        td = data[0]
-        a = td.find_all('a')
+        for td in data:
+            a = td.find_all('a')
 
-         # Look for timestamp and url
-        for item in a:
-            timestamp = re.findall(r'\d{13}', str(item))
-            t_url = str(re.findall(r'href=".*"', str(item))).split('"')[1].split("standings")[0]
-            t_url = "https://" + base_url + t_url
-            url_list.append(t_url)
-            if len(timestamp) != 0:
-                timestamp = datetime.datetime.fromtimestamp(int(timestamp[0])/1000).strftime('%Y-%m-%d')
-                date_list.append(timestamp)
+            # Look for timestamp and url
+            for item in a:
+                timestamp = re.findall(r'\d{13}', str(item))
+                t_url = str(re.findall(r'href=".*"', str(item))).split('"')[1].split("standings")[0]
+                t_url = "https://" + base_url + t_url
+                url_list.append(t_url)
+                if len(timestamp) != 0:
+                    timestamp = datetime.datetime.fromtimestamp(int(timestamp[0])/1000).strftime('%Y-%m-%d')
+                    date_list.append(timestamp)
 
         row_data = [td.text.strip() for td in data]
         # add date and url to row_data
