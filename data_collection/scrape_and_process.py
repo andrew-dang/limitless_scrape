@@ -50,7 +50,7 @@ if use_checkpoint:
     net_new_url_ls = [url for url in all_url_ls if url not in ckpt_url_ls] 
     
     # 5. Create url dict; Only use first 2 urls as a test
-    url_dict = create_urls(net_new_url_ls[:2])
+    url_dict = create_urls(net_new_url_ls)
 
     logging.info('Scraping tournaments...')                   
     # # 6. Scrape urls in dict and add date
