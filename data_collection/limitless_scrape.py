@@ -249,11 +249,11 @@ def scrape_players_and_decks(url):
     return df
 
 
-def deck_round_performance(deck_record_df, norm=True):
-    if norm:
-        display(deck_record_df.groupby("Record").value_counts(normalize=True)*100)
-    else:
-        display(deck_record_df.groupby("Record").value_counts())
+# def deck_round_performance(deck_record_df, norm=True):
+#     if norm:
+#         display(deck_record_df.groupby("Record").value_counts(normalize=True)*100)
+#     else:
+#         display(deck_record_df.groupby("Record").value_counts())
         
         
 def multi_latenight_scrape(url_dict):

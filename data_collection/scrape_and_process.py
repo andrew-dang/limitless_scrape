@@ -40,6 +40,7 @@ df_latenight = scrape_for_dates_and_url()
 
 # 2. Use checkpoint. If not using checkpoint, scrape everything?
 if use_checkpoint:
+    logging.info("Using checkpoint. Loading in checkpoint...")
     ckpt_df = pd.read_csv("checkpoint/latest/checkpoint.csv")
     current_results_df = pd.read_csv("results/latest/scrape_results.csv")
     
@@ -49,8 +50,9 @@ if use_checkpoint:
     net_new_url_ls = [url for url in all_url_ls if url not in ckpt_url_ls] 
     
     # 5. Create url dict; Only use first 2 urls as a test
-    url_dict = create_urls(net_new_url_ls[:2])
-                       
+    url_dict = create_urls(net_new_url_ls[:1])
+
+    logging.info('Scraping tournaments...')                   
     # # 6. Scrape urls in dict and add date
     scrape_results_dict = multi_latenight_scrape(url_dict)
     scrape_results_dict = add_date_to_dict(scrape_results_dict, df_latenight)
@@ -58,6 +60,7 @@ if use_checkpoint:
     # 7. Process data: Get WLT counts for each deck in each tournament
     all_tournament_results_dict = multi_tournament_wr_per_tournament(scrape_results_dict)
 
+    logging.info('Calculating win rates...')
     # Calculate winrates
     multi_tournament_wr_calc(all_tournament_results_dict)
     
