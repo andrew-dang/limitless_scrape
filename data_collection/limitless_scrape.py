@@ -325,10 +325,11 @@ def scrape_for_dates_and_url():
     soup = BeautifulSoup(page, 'html5lib')
 
     # Find all tables
-    tables = soup.find_all('table')
+    # tables = soup.find_all('table')
 
     # Completed table is the second one 
-    completed = tables[1]
+    completed = soup.find('table', {'class': 'striped completed-tournaments'})
+
 
     # base URl
     base_url = "play.limitlesstcg.com"
@@ -354,18 +355,20 @@ def scrape_for_dates_and_url():
     # Get date and tournament url; found in first column of table
     for row_i, row in enumerate(completed.find_all('tr')[1:], start=0):
         data = row.find_all('td')
-        for td in data:
+        for it, td in enumerate(data):
             a = td.find_all('a')
 
             # Look for timestamp and url
             for item in a:
                 timestamp = re.findall(r'\d{13}', str(item))
-                t_url = str(re.findall(r'href=".*"', str(item))).split('"')[1].split("standings")[0]
-                t_url = "https://" + base_url + t_url
-                url_list.append(t_url)
                 if len(timestamp) != 0:
                     timestamp = datetime.datetime.fromtimestamp(int(timestamp[0])/1000).strftime('%Y-%m-%d')
                     date_list.append(timestamp)
+                if it == 0:
+                    t_url = str(re.findall(r'href=".*"', str(item))).split('"')[1].split("standings")[0]
+                    t_url = "https://" + base_url + t_url
+                    url_list.append(t_url)
+
 
         row_data = [td.text.strip() for td in data]
         # add date and url to row_data
@@ -375,7 +378,7 @@ def scrape_for_dates_and_url():
         df.loc[length] = row_data
 
     # filter tournaments for late nights
-    df_latenight = df[df["Name"].str.contains("Late Night #\d{2}")]
+    df_latenight = df[df[df.columns[1]].str.contains("Late Night #\d{2}")]
     
     return df_latenight
 
