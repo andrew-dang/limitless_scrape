@@ -124,12 +124,12 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
     # Create line graph
     fig = px.line(temp_df, x='date', y='winrate', color='opposing_deck', hover_data=["games_played"], labels=dict(date="Date", 
                                                                                                                   opposing_deck="Opposing Deck", 
-                                                                                                                  winrate="Winrate",
+                                                                                                                  winrate="Win Rate",
                                                                                                                   games_played="Games Played"), markers=True)
     
     # Update layout
     fig.update_layout(width=1080, height=720)
-    fig.update_layout(showlegend=True, yaxis_range=[0,1], title_text=dropdown_deck)
+    fig.update_layout(showlegend=True, yaxis_range=[0,1], title_text=f"dropdown_deck's win rate against opposing decks")
     fig.update_layout(title={"x": 0.45, "y": 0.95, "xanchor": "center", "yanchor": "middle"})
     fig.add_hline(y=0.5)
     fig.update_xaxes(ticks="outside", ticklen=10)
