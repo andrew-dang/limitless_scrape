@@ -10,15 +10,26 @@ import plotly.graph_objects as go
 
 
 def deck_and_records(round_dict, players_df):
-    """
-    For a given round, create new DataFrame that has the name of the deck 
-    archetype and that player's record at the end of the round. This will help 
-    determine what deck you can expect to face in the following round given your record. 
+    """Join the players_df and the Pairings DataFrames.
+
+    Join the players_df and the Pairings DataFrames so that each pairing now has the 
+    players' names, IDs, records, deck arcetypes, and who won the pairing, and what 
+    archetype the winner was playing. 
+
+    Arguments: 
+        round_dict (dict): Dictionary containing a DataFrame for the round with data for 
+                           the Player Names, IDs, and their records. 
+        players_df (DataFrame): DataFrame with each player's name, ID, and choice of deck.
+
+    Returns: 
+        round_df (DataFrame): DataFrame which now has both player's names, IDs, choice of deck, 
+                              their records, which player won in each pairing, and what deck the 
+                              winning player was using.
+
     """
     # Unpack the given round's DataFrame from dictionary
     round_df = round_dict["df"]
 
-    
     # Join round_df and players_df to get deck names 
     round_df = round_df.merge(players_df[["Deck", "Name"]], left_on="Player 1 Name", right_on="Name").drop("Name", axis=1)
     round_df = round_df.rename({"Deck": "Player 1 Deck"}, axis=1)
@@ -29,6 +40,7 @@ def deck_and_records(round_dict, players_df):
     round_df["Player 1"] = round_df["Player 1 Deck"]
     round_df["Player 2"] = round_df["Player 2 Deck"]
     
+    # Create new column that selects the winning deck
     conditions = [
         (round_df['Winner ID'] == round_df['Player 1 ID']),
         (round_df['Winner ID'] == round_df['Player 2 ID']),
@@ -40,57 +52,60 @@ def deck_and_records(round_dict, players_df):
 
     round_df["Winning Deck"] = np.select(conditions, winner)
     
+
     return round_df
 
-
-# Define function for multi_tournament_round_analysis
-def multi_tournament_round_analysis(all_tournament_dict, round_num):
-    """ 
-    Across multiple tournaments, find out the deck you're most likely going to encounter based on 
-    your record.
+# No longer in use?
+# # Define function for multi_tournament_round_analysis
+# def multi_tournament_round_analysis(all_tournament_dict, round_num):
+#     """ 
+#     Across multiple tournaments, find out the deck you're most likely going to encounter based on 
+#     your record.
     
-    Arguments:
-        all_tournament_dict (dict): Dictionary with all the dataframes for players and pairings
-        round_num (int): Round we want to analyze
-    """
-    proc_dict = {}
+#     Arguments:
+#         all_tournament_dict (dict): Dictionary with all the dataframes for players and pairings
+#         round_num (int): Round we want to analyze
+#     """
+#     proc_dict = {}
     
-    # deck_and_records requires round_dict, and players_df
-    for t in all_tournament_dict:
-        # Get the late night number; used for dictionary keys
-        # ln_num = re.findall(r"ln\d{2}", t)[0]
+#     # deck_and_records requires round_dict, and players_df
+#     for t in all_tournament_dict:
+#         t_dict = all_tournament_dict[t]
+#         players_df = t_dict["players"]    # This is a df
+#         pairings_dict = t_dict["pairings"]
+#         round_dict = pairings_dict[f"round_{round_num}_dict"]
         
-        t_dict = all_tournament_dict[t]
-        players_df = t_dict["players"]    # This is a df
-        pairings_dict = t_dict["pairings"]
-        round_dict = pairings_dict[f"round_{round_num}_dict"]
+#         # Process data for this round_num for each tournament
+#         round_df = deck_and_records(round_dict, players_df)
         
-        # Process data for this round_num for each tournament
-        round_df = deck_and_records(round_dict, players_df)
+#         # Save processed data to proc_dict
+#         proc_dict[f"{t}"] = round_df
         
-        # Save processed data to proc_dict
-        proc_dict[f"{t}"] = round_df
-        
-    # Concatenate all df in proc_dict
-    all_proc_df = pd.DataFrame()
+#     # Concatenate all df in proc_dict
+#     all_proc_df = pd.DataFrame()
     
-    for d in proc_dict:
-        temp_df = proc_dict[d]
-        all_proc_df = pd.concat([all_proc_df, temp_df], ignore_index=True)
+#     for d in proc_dict:
+#         temp_df = proc_dict[d]
+#         all_proc_df = pd.concat([all_proc_df, temp_df], ignore_index=True)
         
-    return all_proc_df
+#     return all_proc_df
 
 
 def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
-    """
+    """Count wins, losses and ties for every matchup in a round. 
+
     Counts wins, losses, and ties of each archetype against every other archetype present
-    in a round. 
+    in a single round of a tournament. 
     
-    round_dict (dict): Dictionary that contains information for a round. Currently is 
-                       a DataFrame only inside the dictionary. 
-    standings_df (df): DataFrame with the standings for the tournament that the round is in. 
-    all_archetype_dict (dict): Dictionary that will store the winrates
-    
+    Arguments:
+        round_dict (dict): Dictionary that contains information for a round. Currently is 
+                        a DataFrame only inside the dictionary. 
+        standings_df (df): DataFrame with the standings for the tournament that the round is in. 
+        all_archetype_dict (dict): Dictionary that will store the win rates for all matchups.
+        
+    Returns: 
+        all_archetype_dict: Dictionary that stores win rates for each archetype. 
+
     """
     
     # Add deck names to each player in the pairings
@@ -99,20 +114,15 @@ def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
     # find unique archetypes 
     all_archetypes = standings_df['Deck'].unique().tolist()
     
-    
     # For each archetype, find the winrates against each other archetype
     for archetype in all_archetypes:
 
-        # Dictionary to store all the matchups
+        # Dictionary to store all the matchups for current archetype
         if archetype in all_archetype_dict:
             mu_dict = all_archetype_dict[archetype]
         else:
             mu_dict = {}
 
-        # # Find rows when either player played the archetype
-        # temp_df1 = round_df[(round_df["Player 1"] == archetype) & (round_df["Player 1"] != round_df["Player 2"])]
-        # temp_df2 = round_df[(round_df["Player 2"] == archetype) & (round_df["Player 1"] != round_df["Player 2"])]
-        
         # Try including mirror matches:
         temp_df1 = round_df[(round_df["Player 1"] == archetype)]
         temp_df2 = round_df[(round_df["Player 2"] == archetype)]
@@ -122,7 +132,7 @@ def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
             row = temp_df1.iloc[i]
             opposing_deck = row["Player 2"]
 
-            # add opposing deck to mu dict
+            # add opposing deck to mu dict if its not already there; start WLT count at zero
             if opposing_deck not in mu_dict:
                 mu_dict[opposing_deck] = {"wins": 0, "losses": 0, "ties": 0}
 
@@ -153,14 +163,38 @@ def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
 
         # Update all_archetype_dict
         all_archetype_dict[archetype] = mu_dict
+
     
     return all_archetype_dict
 
 
 def archetype_wr_per_tournament(t_dict):
-    """
+    """Count wins, losses and ties for every matchup for a tournament.
+
     Counts wins, losses, and ties of each archetype against every other archetype in each
     round in the tournament.
+
+    Arguments: 
+        t_dict: Dictionary that contains the Players DataFrame and for each round in the 
+                tournament, the Pairings DataFrame.
+    
+    Returns: 
+        t_wlt_dict (dict): Nested dictionary where the keys are each archetype present at the
+                           tournament, and the values are dictionaries where these keys are 
+                           the archetypes that this archetype played against in the tournament, 
+                           and the values are the total wins, losses and ties in this matchup. 
+
+                           i.e.
+                           {
+                            "Arceus Goodra": {
+                                "Palkia Inteleon": {
+                                    "wins": 4, "ties": 2, "losses": 3 
+                                },
+                                "Regis": {
+                                    "wins": 7, "ties": 2, "losses": 1 
+                                }}
+                            }  
+
     """
     
     # Create empty dicionaries to store data
@@ -182,9 +216,19 @@ def archetype_wr_per_tournament(t_dict):
 
 
 def multi_tournament_wr_per_tournament(all_tournament_dict):
-    """
-    Unpack the all_tournament_dict and count WLT for each archetype for each tournament in
-    the dictionary, and store the results in a dictionary.
+    """Count wins, losses and ties for every matchup for multiple tournaments. 
+
+    Unpack the all_tournament_dict and count wins, losses and ties for each archetype for each tournament in
+    the all_tournament_dictionary, and store the results in a dictionary.
+
+    Arguments:
+        all_tournament_dict (dict): Dictionary that contains Standings and Pairings for multiple tournaments. 
+
+    Returns:
+        all_tournament_results_dict (dict): Dictionary that counts the wins, losses, and ties for each archetype in 
+                                            every tournament in all_tournament_dict. Does not sum up counts across 
+                                            tournaments, only within each individual tournament. 
+
     """
     
     # Empty dictionary to store results 
@@ -201,9 +245,14 @@ def multi_tournament_wr_per_tournament(all_tournament_dict):
         
     
 def calc_wr(archetype_dict):
-    """
-    archetype_dict (dict): Dictionary that contains a decks WLT against every archetype
+    """Calculate win rates for every matchup in a tournament. 
+
+    Using the win, loss and tie counts, calculate the win rate for every matchup. 
+
+    Arguments:
+        archetype_dict (dict): Dictionary that contains a decks WLT against every archetype
                            it has played against in the given tournament. 
+
     """
     
     # opposing deck is itself a dictionary 
@@ -218,7 +267,7 @@ def calc_wr(archetype_dict):
         
         
 def multi_tournament_wr_calc(all_results_dict):
-    """ Use the WLT counts for every deck and calculate winrates.
+    """ Use the WLT counts for every deck and calculate win rates for multiple tournaments.
     
     For each tournament scraped, look at each deck played and look at its record against every archetype it played against 
     in a given tournament. Use the WLT counts to calculate winrates. 
@@ -234,8 +283,21 @@ def multi_tournament_wr_calc(all_results_dict):
             calc_wr(archetype_dict)
             
 def create_plot_df(all_tournament_results_dict):
-    """
-    Loop through all_tournament_results_dict to populate a DataFrame used for plotting later.
+    """Loop through all_tournament_results_dict to populate a DataFrame used for plotting later.
+
+    Each row contains the active deck, the opposing deck, date of the tournament, the win rate for the 
+    active deck against the opposing deck, and the number of games played between the two decks. 
+
+    Arguments: 
+        all_tournaments_results_dict (dict): Dictionary with the counts the wins, losses, and ties for each archetype in 
+                                             every tournament. Does not sum up counts across tournaments, only within 
+                                             each individual tournament. 
+
+    Returns:
+        plot_df (DataFrame): DataFrame containing the name of active deck, the name of opposing deck, date of the 
+                             tournament, the win rate for the active deck against the opposing deck, and the number 
+                             of games played between the two decks. 
+
     """
     
     headers = ["deck", "opposing_deck", "date", "winrate", "games_played"]
@@ -253,102 +315,29 @@ def create_plot_df(all_tournament_results_dict):
                 # Put data in df 
                 length = len(plot_df)
                 plot_df.loc[length] = row
-                
+
+
     return plot_df
 
 
 def filter_plot_df(plot_df, deck):
+    """Filters plot_df using the selected active deck archetype. 
+    
+    Arguments:
+        plot_df (DataFrame): DataFrame containing the name of active deck, the name of opposing deck, date of the 
+                             tournament, the win rate for the active deck against the opposing deck, and the number 
+                             of games played between the two decks.
+        deck (str): Name of the active deck.
+
+    Returns:
+        filtered_df (DataFrame): Filtered plot_df to only contain data where the active deck is equaled to the deck 
+                                 argument. Also aggregates data by date, as there are typically two tournaments per 
+                                 Tuesday.
+
     """
-    deck (str): Name of deck of interest
-    """
+    
     filtered_df = plot_df[plot_df["deck"] == deck]
     filtered_df = filtered_df.groupby(["deck", "opposing_deck", "date"]).agg({"winrate":"mean", "games_played": "sum"}).reset_index()
     
+
     return filtered_df 
-
-
-def plot_winrate_by_date(plot_df, deck):
-    
-    filtered_df = filter_plot_df(plot_df, deck)
-    fig = px.line(filtered_df, x="date", y="winrate", color="opposing_deck", title=deck)
-    fig.show()
-    
-    
-def plot_wr_vs_top_five(plot_df, deck):
-    """
-    Plot a decks winrate over time against the top 5 decks by usage. 
-    
-    Arguments:
-        plot_df (df): DataFrame containing winrates for each archetype. 
-        deck (str): Name of the deck of interest.
-    
-    """
-
-    # Filter df 
-    filtered_df = filter_plot_df(plot_df, deck)
-    
-    
-    # Empty lists, dictionaries, and figure
-    um = {}
-    button_list = []
-    
-    # Instantiate empty plotly figure, set dimensions
-    fig = go.Figure()
-    fig.update_layout(width=1080, height=720)
-    # colors = px.colors.qualitative.Plotly
-
-    top5 = [
-        "Palkia Inteleon",
-        "Giratina LZ Box", 
-        "Kyurem Palkia",
-        "Lost Zone Box", 
-        "Mew Genesect"
-    ]
-    
-    # If deck is in top 5, replace that entry with Regis
-    for i, d in enumerate(top5):
-        if d == deck:
-            top5[i] = "Regis"
-
-    # Create a line graph for each deck in the top 5 and create corresponding buttons
-    for i, archetype in enumerate(top5):
-        temp_df = filtered_df[filtered_df['opposing_deck'] == archetype]
-
-        hovertemplate = "Games Played: %{customdata} <br>Winrate: %{y} </br>"
-
-        # Add line for each archetype in top5
-        fig.add_trace(go.Scatter(x=temp_df['date'], 
-                                 y=temp_df['winrate'], 
-                                 customdata=temp_df['games_played'], 
-                                 visible=True, 
-                                 name=archetype, 
-                                 hovertemplate=hovertemplate)
-                     )
-
-
-        # Create buttons for dropdown menu
-        button = dict(method='restyle',
-                  label=archetype,
-                  visible=True,
-                  args=[{'visible':True}, [i]],
-                  args2 = [{'visible': False}, [i]],
-                 )
-
-        button_list.append(button)
-    
-    # Adjust updatemenus for dropdown
-    um['buttons'] = button_list
-    um['direction'] = 'down'
-    um['showactive'] = True
-    um['pad'] = {"r": 10, "t": 10}
-    um['type'] ='dropdown'
-    updatemenus = [um]
-
-    # add dropdown menus to the figure
-    fig.update_layout(showlegend=True, updatemenus=updatemenus)
-    fig.update_layout(yaxis_range=[0,1], title_text=deck)
-    fig.add_hline(y=0.5)
-
-    f = fig.full_figure_for_development(warn=False)
-    
-    fig.show()

@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
 # Standard imports
 import numpy as np
 import pandas as pd
@@ -23,18 +20,12 @@ app = dash.Dash(__name__)
 server = app.server
 
 
-# In[9]:
-
-
 # Read in data
 plot_df = pd.read_csv('data_collection/results/latest/scrape_results.csv')
 set_calendar_df = pd.read_csv('set_release_calendar.csv')
 
 # Make sure set_names don't have white space
 set_calendar_df["set_name"] = set_calendar_df["set_name"].str.strip()
-
-
-# In[10]:
 
 
 app.layout = html.Div([
@@ -90,9 +81,6 @@ app.layout = html.Div([
         
 
 
-# In[11]:
-
-
 @app.callback(
     Output('our_graph', 'figure'),
     [
@@ -103,11 +91,23 @@ app.layout = html.Div([
      )
      
 def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
+    """Plot win rates for selected active deck and selected opposing decks in the selected format.
+
+    Arguments:
+        dropdown_format (str): Name of a Pokemon TCG expansion. Filters data for plotting 
+                               to only include data from the start of the expansion's release date, 
+                               til the day before the next expansion's release date.  
+        dropdown_deck (str): Name of a Pokemon TCG archetype. Filters the data for plotting. Show 
+                             this decks win rate against other archetypes. 
+        dropdown_opp_deck (list): Name(s) of Pokemon TCG archetype(s). Filters the data to show the 
+                                  win rates of the deck selected in dropdown_deck against the decks 
+                                  selected in dropdown_opp_deck.
+
+    Returns:
+        fig (plotly.express line graph): A line graph showing the data filtered by the three dropdown 
+                                         menus.  
     """
-    dropdown (list): Values selected in dropdown menu. 
-    """
-    
-    
+     
     # Filter by date
     set_df = set_calendar_df[set_calendar_df["set_name"]==dropdown_format]
     start_date = set_df.iloc[0]['start_date']
@@ -139,15 +139,5 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
     return fig 
 
 
-# In[ ]:
-
-
 if __name__ == '__main__':
     app.run_server(debug=False)
-
-
-# In[ ]:
-
-
-
-

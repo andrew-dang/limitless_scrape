@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 # imports
 import numpy as np
 import pandas as pd
@@ -22,15 +19,18 @@ import os
 
 request_header = {"User-Agent":  "Late Night Results Compiler (heyitsbluray@gmail.com)"}
 
-# In[ ]:
-
 
 def create_urls(tournaments):
     """
     Create URLs for the tournament you wish to scrape.
     
     Arguments:
-        tournaments (list): list of urls for the late night tournaments.
+        tournaments (list): list of urls (str) for the late night tournaments.
+
+    Returns: 
+        url_dict (dict): Dictionary with the tournament's details page URL as the key, and 
+                         the tournament's Standings and Pairings URLs as values. 
+
     """
     url_dict = {}
     
@@ -56,15 +56,15 @@ def create_urls(tournaments):
 
 def scrape_limitless_latenight(urls):
     """
-    Scrapes the pairings pages of a Late Night tournament. Returns information including:
-    - Player Names
-    - Player Records
-    - Player IDs
-    - Scores of each pairing per round
-
+    Scrapes the pairings pages of a Late Night tournament. Returns a DataFrame
+    containing Player Names, Player Recods, Player IDs, and the result of each pairing.
     
     Arguments: 
         urls (list): list of urls
+
+    Returns: 
+        all_round_dict (dict): Dicionary that contains DataFrames with the above information for each 
+                               round of pairings in a given tournament. 
     """
     
     # Empty dictionary to store results of each round 
@@ -72,9 +72,6 @@ def scrape_limitless_latenight(urls):
     
     # Loop through each round 
     for round_i, url in enumerate(urls, start=1):
-        # FOR DEBUGGING 
-        # logging.info(f"Scraping data for round {round_i}")
-        
         # Create dictionaries to store data 
         round_dict = {}
         
@@ -91,8 +88,7 @@ def scrape_limitless_latenight(urls):
         # get headers
         headers = []
         
-    # If there is no round, continue to next url
-        # try:    
+        # Find headers
         for item in table.find_all('th'):
             title = item.text
             headers.append(title)
@@ -118,7 +114,7 @@ def scrape_limitless_latenight(urls):
         records_list = ['skip']
         ids_list = ['skip']
 
-        # Get the data
+        # Get the data in each row
         for row_i, row in enumerate(table.find_all('tr')[1:], start=1):
 
             # Get player id of winner
@@ -180,9 +176,6 @@ def scrape_limitless_latenight(urls):
         round_dict["df"] = df
 
         all_round_dict[f"round_{round_i}_dict"] = round_dict
-
-        # except:
-            # logging.info("No round...")
         
     
     return all_round_dict
@@ -196,6 +189,10 @@ def scrape_players_and_decks(url):
     
     Arguments:
         url (str): URL that contains the record of each player and the deck they played.
+
+    Returns:
+        df (DataFrame): DataFrame that contains Player IDs, Player Names, and the deck that 
+                        each player played with for the tournament. 
     """
     # Send request to get html
     page = requests.get(url, headers=request_header).text
@@ -222,7 +219,7 @@ def scrape_players_and_decks(url):
     for row in player_table.find_all('tr')[1:]:
         data = row.find_all('td')   
         
-    # href found in second column 
+    # href found in second column; used to get player ID 
         for i, td in enumerate(data):
             if i == 1:
                 a = td.find('a')
@@ -247,16 +244,22 @@ def scrape_players_and_decks(url):
         df.loc[length] = row_data
   
     return df
-
-
-def deck_round_performance(deck_record_df, norm=True):
-    if norm:
-        display(deck_record_df.groupby("Record").value_counts(normalize=True)*100)
-    else:
-        display(deck_record_df.groupby("Record").value_counts())
         
         
 def multi_latenight_scrape(url_dict):
+    """
+    Unpack the url_dict to get the URLS of the Standings and Pairings pages of each tournament 
+    present in the dictionary. Scrape these URLs and put relevant information into DataFrames. 
+    Place these DataFrames into the all_tournament_dict. 
+
+    Args:
+        url_dict (dict): Dictionary that contains URLs for the Standings and Pairings pages of the tournament(s).
+
+    Returns:
+        all_tournament_dict (dict): Dictionary that has DataFrames for the Standings and Pairings tables for each
+                                    tournament present in the url_dict.
+    """
+    
     all_tournament_dict = {}
     
     # Unpack each tournament in url_dict, scrape, and place in new dict
@@ -278,59 +281,26 @@ def multi_latenight_scrape(url_dict):
     return all_tournament_dict
     
 
-def format_scraper(set_name):
-    """
-    Given a Pokemon set name, scrape all the Late Night tournament results for when this set was legal
-    
-    Arguments:
-        set_name (str): Name of the set
-    """
-    
-    set_dict = {
-        "Lost Origin": "2022-09-09",
-        "Pokemon GO": "2022-07-01"
-    }
-
-    release_date = set_dict[set_name]
-
-
-    # Create DataFrame with dates and URL for each Late Night 
-    df_latenight = scrape_for_dates_and_url()
-
-    # Filter for the tournaments that this set was legal for
-    df_set = df_latenight[df_latenight["Date"] >= release_date]
-
-    # Get the list of urls
-    df_set_urls = df_set['URL'].tolist()
-
-    # Create url_dict
-    url_dict = create_urls(df_set_urls)
-    
-    # Scrape all the tournaments in this format 
-    all_tournament_dict = multi_latenight_scrape(url_dict)
-    
-    return all_tournament_dict
-
-
 def scrape_for_dates_and_url():
     """
-    Scrapes limitlesstcg's organizer page to get a DataFrame that contains 
+    Scrapes the organizer page for Late Night tournaments to get a DataFrame that contains 
     all the dates and URLs of Late Night tournaments. 
+
+    Returns:
+        df_latenight (DataFrame): DataFrame that contains the date, name and url of all 
+                                  the tournaments a part of the 'Late Night' series.
     """
     
     # Page for scraping tournaments 
     url = 'https://play.limitlesstcg.com/organizer/194'
 
-    page = requests.get(url).text
+    page = requests.get(url, headers=request_header).text
     soup = BeautifulSoup(page, 'html5lib')
 
-    # Find all tables
-    tables = soup.find_all('table')
-
     # Completed table is the second one 
-    completed = tables[1]
+    completed = soup.find('table', {'class': 'striped completed-tournaments'})
 
-    # base URl
+    # base URL; to be appended to URLs found through scraping
     base_url = "play.limitlesstcg.com"
 
     # Get header
@@ -354,18 +324,20 @@ def scrape_for_dates_and_url():
     # Get date and tournament url; found in first column of table
     for row_i, row in enumerate(completed.find_all('tr')[1:], start=0):
         data = row.find_all('td')
-        td = data[0]
-        a = td.find_all('a')
+        for it, td in enumerate(data):
+            a = td.find_all('a')
 
-         # Look for timestamp and url
-        for item in a:
-            timestamp = re.findall(r'\d{13}', str(item))
-            t_url = str(re.findall(r'href=".*"', str(item))).split('"')[1].split("standings")[0]
-            t_url = "https://" + base_url + t_url
-            url_list.append(t_url)
-            if len(timestamp) != 0:
-                timestamp = datetime.datetime.fromtimestamp(int(timestamp[0])/1000).strftime('%Y-%m-%d')
-                date_list.append(timestamp)
+            # Look for timestamp and url
+            for item in a:
+                timestamp = re.findall(r'\d{13}', str(item))
+                if len(timestamp) != 0:
+                    timestamp = datetime.datetime.fromtimestamp(int(timestamp[0])/1000).strftime('%Y-%m-%d')
+                    date_list.append(timestamp)
+                if it == 0:
+                    t_url = str(re.findall(r'href=".*"', str(item))).split('"')[1].split("standings")[0]
+                    t_url = "https://" + base_url + t_url
+                    url_list.append(t_url)
+
 
         row_data = [td.text.strip() for td in data]
         # add date and url to row_data
@@ -374,8 +346,12 @@ def scrape_for_dates_and_url():
         length = len(df)
         df.loc[length] = row_data
 
-    # filter tournaments for late nights
-    df_latenight = df[df["Name"].str.contains("Late Night #\d{2}")]
+    # filter tournaments for late nights; exclude special events 
+    df_latenight = df[
+        (df[df.columns[1]].str.contains("Late Night #\d{2}")) | 
+        (df[df.columns[1]].str.contains("Late Night Series #")) & 
+        (~df[df.columns[1]].str.contains("Late Late"))
+        ]
     
     return df_latenight
 
@@ -388,6 +364,10 @@ def add_date_to_dict(all_tournament_dict, df_latenight):
         all_tournament_dict (dict): Dictionary that contains the final standings and a DataFrame
                                     for each round for all tournaments scraped. 
         df_latenight (df): DataFrame that contains the dates and urls for all Late Night tournaments. 
+
+    Returns: 
+        all_tournament_dict (dict): The all_tournament_dict with the addition of the "date" key and value
+                                    for each tournament. 
     """
     
     # Find the tournaments date in df_latenight
@@ -404,13 +384,17 @@ def add_date_to_dict(all_tournament_dict, df_latenight):
 
 def update_results(current_results, net_new_results):
     """
-    current_results (df): Results previously scraped.
-    net_new_results (df): Results just scraped. 
+    Takes the processed results from the latest folder and appends the processed data of the net new tournaments.
+    Saves the DataFrame back into the latest folder, as well as the dated folder with a date string. 
+
+    Arguments:
+        current_results (df): DataFrame with processed data of previously scraped tournaments.
+        net_new_results (df): DataFrame with processed data of net net tournaments that were just scraped. 
     """
     
     # Add newly scraped data to previously scraped data
     updated_plot_df = pd.concat([net_new_results, current_results], ignore_index=True)
-    
+   
     # Define variables and paths for saving checkpoint
     today = datetime.date.today().strftime("%Y-%m-%d")
     path_to_latest = os.path.join(os.getcwd(), "results/latest/scrape_results.csv")
@@ -425,9 +409,11 @@ def update_results(current_results, net_new_results):
     
 def update_checkpoint(wr_dict, ckpt_df):
     """
-    
+    Takes the checkpoint.csv from the latest folder and updates it to include the 
+    net new tournament dates and URLs. 
+
     Arguments:
-        wr_dict (dict): Dictionary with the winrates of decks across multiple tournaments.
+        wr_dict (dict): Dictionary with the win rates of decks across multiple tournaments for net new tournaments.
         ckpt_df (DataFrame): DataFrame that contains URL and dates of tournaments already scraped. 
     """
     
