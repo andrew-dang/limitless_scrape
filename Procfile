@@ -1,1 +1,1 @@
-web: gunicorn plotting_win_rates:server
+web: gunicorn plot_win_rates:server
