@@ -1,1 +1,1 @@
-web: gunicorn plotting_notebook:server
+web: gunicorn plotting_win_rates:server
