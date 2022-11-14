@@ -300,7 +300,7 @@ def create_plot_df(all_tournament_results_dict):
 
     """
     
-    headers = ["deck", "opposing_deck", "date", "winrate", "games_played"]
+    headers = ["deck", "opposing_deck", "t_url", "date", "winrate", "games_played"]
     plot_df = pd.DataFrame(columns = headers)
 
     # first loop gets t_dict as value
@@ -310,7 +310,7 @@ def create_plot_df(all_tournament_results_dict):
         for deck_of_interest, archetype_dict in t_dict['t_wlt_dict'].items():
             # Third loop gives opposing deck name and WLT counts
             for opposing_deck, wlt_counts in archetype_dict.items():
-                row = [deck_of_interest, opposing_deck, date, wlt_counts['winrate'], wlt_counts['games_played']]
+                row = [deck_of_interest, opposing_deck, t_url, date, wlt_counts['winrate'], wlt_counts['games_played']]
 
                 # Put data in df 
                 length = len(plot_df)

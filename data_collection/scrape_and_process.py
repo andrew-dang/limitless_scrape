@@ -32,14 +32,14 @@ logger.setLevel(logging.INFO)
 
 # %%
 # Use checkpoint or scrape everything?
-use_checkpoint = True
+use_checkpoint = False
 
 # %%
 # 1. Create DataFrame that contans dates and URLS for each tournament
 df_latenight = scrape_for_dates_and_url()
 
 # 2. Use checkpoint. If not using checkpoint, scrape everything?
-if use_checkpoint:
+if use_checkpoint == True:
     logging.info("Using checkpoint. Loading in checkpoint...")
     ckpt_df = pd.read_csv("checkpoint/latest/checkpoint.csv")
     current_results_df = pd.read_csv("results/latest/scrape_results.csv")
@@ -89,16 +89,15 @@ else:
     # Create plot_df
     plot_df = create_plot_df(all_tournament_results_dict)
     
-    # Define variables and paths
-    today = datetime.date.today().strftime("%Y-%m-%d")
-    path_to_latest = os.path.join(os.getcwd(), "results/latest/scrape_results.csv")
-    path_to_dated = os.path.join(os.getcwd(), f"results/dated/scrape_results_{today}.csv")
 
-    # Save results to latest and dated
-    logging.info("Saving results to latest...")
-    plot_df.to_csv(path_to_latest, header=True, index=False)
-    logging.info("Saving results to dated...")
-    plot_df.to_csv(path_to_dated, header=True, index=False) 
+    # Create blank current results and append net new results (plot_df)
+    headers = ["deck", "opposing_deck", "t_url", "date", "winrate", "games_played"]
+    current_results_df = pd.DataFrame(columns=headers)
+    update_results(current_results_df, plot_df)
+
+    # Create and save checkpoint 
+    ckpt_df = pd.DataFrame(columns=["date", "url"])
+    update_checkpoint(all_tournament_results_dict, ckpt_df)
 
 # %%
 

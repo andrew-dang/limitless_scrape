@@ -407,6 +407,11 @@ def update_results(current_results, net_new_results):
     
     # Add newly scraped data to previously scraped data
     updated_plot_df = pd.concat([net_new_results, current_results], ignore_index=True)
+    logging.info(f"Number of rows before dropping duplicates: {updated_plot_df.shape[0]}")
+
+    # Drop duplicate rows 
+    updated_plot_df = updated_plot_df.drop_duplicates(ignore_index=True)
+    logging.info(f"Number of rows after dropping duplicates: {updated_plot_df.shape[0]}")
    
     # Define variables and paths for saving checkpoint
     today = datetime.date.today().strftime("%Y-%m-%d")
