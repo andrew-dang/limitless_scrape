@@ -47,13 +47,13 @@ app.layout = html.Div([
             clearable=True, 
             searchable=True,
             placeholder='Select a set',
-            persistence='string', 
+            persistence=True, 
             persistence_type='memory'),
         
         dcc.Dropdown(
             id='dropdown_deck', 
             options=[{'label': x, 'value': x} for x in plot_df.sort_values('deck')['deck'].unique()], 
-            value='Mew Genesect',
+ #           value='Mew Genesect',
             multi=False, 
             disabled=False,
             clearable=True, 
@@ -79,8 +79,89 @@ app.layout = html.Div([
     
 ])        
         
+# # Set persistence for dropdown_format
+# @app.callback(
+#     Output('dropdown_format', 'persistence')
+#     Input('dropdown_format', 'value')
+# )
+
+# Filter what active decks are available in the dropdown based on format that is selected
+@app.callback(
+    Output('dropdown_deck', 'options'),
+    Input('dropdown_format', 'value')
+)
+def available_active_decks(selected_format):
+    # Filter by date
+    set_df = set_calendar_df[set_calendar_df["set_name"]==selected_format]
+    start_date = set_df.iloc[0]['start_date']
+    end_date = set_df.iloc[0]['end_date']
+    
+    filtered_by_date_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
+    return [{'label': x, 'value': x} for x in filtered_by_date_df.sort_values('deck')['deck'].unique()]
+
+# Set active deck to most popular deck
+@app.callback(
+    Output('dropdown_deck', 'value'),
+    Input('dropdown_format', 'value')
+)
+def set_active_deck(selected_format):
+    # Filter by date
+    set_df = set_calendar_df[set_calendar_df["set_name"]==selected_format]
+    start_date = set_df.iloc[0]['start_date']
+    end_date = set_df.iloc[0]['end_date']
+    
+    filtered_by_date_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
+
+    # group by games played 
+    gp_df = filtered_by_date_df.groupby('deck').sum()['games_played'].reset_index()
+
+    # Return top played deck 
+    return [{'label': x, 'value': x} for x in gp_df.sort_values('games_played', ascending=False)['deck'].unique()][0]['value']
 
 
+# Filter what opposing decks are available in the dropdown based on the format and active deck selected
+@app.callback(
+    Output('dropdown_opp_deck', 'options'),
+    [
+        Input('dropdown_format', 'value'),
+        Input('dropdown_deck', 'value')
+    ]
+)
+def available_opp_decks(selected_format, selected_active_deck):
+    # Filter by date
+    set_df = set_calendar_df[set_calendar_df["set_name"]==selected_format]
+    start_date = set_df.iloc[0]['start_date']
+    end_date = set_df.iloc[0]['end_date']
+    
+    filtered_by_date_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
+    
+    # Filter for deck of interest
+    filtered_df = filter_plot_df(filtered_by_date_df, selected_active_deck)
+    
+    # Return list of opposing decks after filters are applied 
+    return [{'label': x, 'value': x} for x in filtered_df.sort_values('opposing_deck')['opposing_deck'].unique()]
+
+# Set opposing decks to top 5 most played in the selected format
+@app.callback(
+    Output('dropdown_opp_deck', 'value'),
+    Input('dropdown_format', 'value'),
+)
+def available_opp_decks(selected_format):
+    # Filter by date
+    set_df = set_calendar_df[set_calendar_df["set_name"]==selected_format]
+    start_date = set_df.iloc[0]['start_date']
+    end_date = set_df.iloc[0]['end_date']
+    
+    filtered_by_date_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
+
+    # group by games played 
+    gp_df = filtered_by_date_df.groupby('deck').sum('games_played').reset_index()
+    
+    # Return 5 most played deck  
+    return  [x['value'] for x in [{'label': x, 'value': x} for x in gp_df.sort_values('games_played', ascending=False)['deck'].unique()]][0:5]
+
+
+# Plot our graph based on our selections in the dropdown 
 @app.callback(
     Output('our_graph', 'figure'),
     [
@@ -108,11 +189,12 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
                                          menus.  
     """
      
-    # Filter by date
+    # Get a set's start and end date
     set_df = set_calendar_df[set_calendar_df["set_name"]==dropdown_format]
     start_date = set_df.iloc[0]['start_date']
     end_date = set_df.iloc[0]['end_date']
     
+    # Filter dataframe by date
     filtered_by_date_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
     
     # Filter for deck of interest
@@ -122,14 +204,15 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
     temp_df = filtered_df[filtered_df["opposing_deck"].isin(dropdown_opp_deck)]
      
     # Create line graph
-    fig = px.line(temp_df, x='date', y='winrate', color='opposing_deck', hover_data=["games_played"], labels=dict(date="Date", 
+    fig = px.scatter(temp_df, x='date', y='winrate', color='opposing_deck', hover_data=["games_played"], size=temp_df['games_played'], labels=dict(date="Date", 
                                                                                                                   opposing_deck="Opposing Deck", 
                                                                                                                   winrate="Win Rate",
-                                                                                                                  games_played="Games Played"), markers=True)
+                                                                                                                  games_played="Games Played")) \
+                                                                                                                  .update_traces(mode='lines+markers')
     
     # Update layout
     fig.update_layout(width=1080, height=720)
-    fig.update_layout(showlegend=True, yaxis_range=[0,1], title_text=f"{dropdown_deck}'s win rate against opposing decks")
+    fig.update_layout(showlegend=True, yaxis_range=[-0.05,1.05], title_text=f"{dropdown_deck}'s win rate against opposing decks")
     fig.update_layout(title={"x": 0.45, "y": 0.95, "xanchor": "center", "yanchor": "middle"})
     fig.add_hline(y=0.5)
     fig.update_xaxes(ticks="outside", ticklen=10)
