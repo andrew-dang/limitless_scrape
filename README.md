@@ -1,9 +1,15 @@
 Hi there! 
 
 This is the source code for my web app where I scrape Pokemon Trading Card Game (PTCG) tournament results from play.limitlesstcg.com, and plot matchup win rates over time. 
-Please check out the app [here](https://limitlesstcg-analysis.herokuapp.com/).
+[Please check out the app here](https://limitlesstcg-analysis.herokuapp.com/).
 
 If you have any questions, or encounter a bug, please contact me at andrew.dang94@gmail.com.
+
+# Inspiration for the project - I want to be the very best, like no one ever was
+I wanted to build an ETL pipeline that scrapes PTCG tournament results, processes the data to calculate win rates, and then plot the win rates over time. 
+This project perfectly blends two things that I love - the Pokemon Trading Card Game, and data. By monitoring different matchup win rates over time, I can 
+uncover which archetypes are performing well, and which archetypes are trending upward and downward. This knowledge can help me select an archetype to play in 
+future events to help maximize my chances of winning. 
 
 # Using the App
 ## Dropdowns 
