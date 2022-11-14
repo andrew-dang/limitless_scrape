@@ -30,9 +30,9 @@ logger.setLevel(logging.INFO)
 # 7. Process data so it looks like results
 # 8. Update Checkpoint. 
 
-# %%
+
 # Use checkpoint or scrape everything?
-use_checkpoint = False
+use_checkpoint = True
 
 # %%
 # 1. Create DataFrame that contans dates and URLS for each tournament
@@ -98,8 +98,3 @@ else:
     # Create and save checkpoint 
     ckpt_df = pd.DataFrame(columns=["date", "url"])
     update_checkpoint(all_tournament_results_dict, ckpt_df)
-
-# %%
-
-
-

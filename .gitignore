@@ -1,0 +1,4 @@
+__pycache__/
+data_collection/__pycache__/
+data_collection/.ipynb_checkpoints/
+data_collection/schedule.bat

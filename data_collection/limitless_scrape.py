@@ -17,7 +17,7 @@ logger.setLevel(logging.INFO)
 
 import os
 
-request_header = {"User-Agent":  "Late Night Results Compiler (heyitsbluray@gmail.com)"}
+request_header = {"User-Agent":  "Late Night Results Compiler (andrew.dang94@gmail.com)"}
 
 
 def create_urls(tournaments):
