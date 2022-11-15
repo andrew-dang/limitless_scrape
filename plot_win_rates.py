@@ -32,7 +32,7 @@ app.layout = html.Div([
     
     html.Div([
         dcc.Graph(id='our_graph')
-    ], className='nine columns'),
+    ], className='seven columns'),
     
     html.Div([
         
@@ -75,7 +75,11 @@ app.layout = html.Div([
             persistence_type='memory'),
             
         
-    ], className='three columns'),
+    ], className='four columns'),
+
+    html.Div([
+        dcc.Graph(id='heatmap')
+    ], className='four columns')
     
 ])        
         
@@ -204,15 +208,21 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
     temp_df = filtered_df[filtered_df["opposing_deck"].isin(dropdown_opp_deck)]
      
     # Create line graph
-    fig = px.scatter(temp_df, x='date', y='winrate', color='opposing_deck', hover_data=["games_played"], size=temp_df['games_played'], labels=dict(date="Date", 
-                                                                                                                  opposing_deck="Opposing Deck", 
-                                                                                                                  winrate="Win Rate",
-                                                                                                                  games_played="Games Played")) \
-                                                                                                                  .update_traces(mode='lines+markers')
+    fig = px.scatter(temp_df, 
+                     x='date', 
+                     y='winrate', 
+                     color='opposing_deck', 
+                     hover_data=["games_played"], 
+                     size='games_played', 
+                     labels=dict(date="Date", 
+                                 opposing_deck="Opposing Deck", 
+                                 winrate="Win Rate", 
+                                 games_played="Games Played")) \
+                                 .update_traces(mode='lines+markers')
     
     # Update layout
     fig.update_layout(width=1080, height=720)
-    fig.update_layout(showlegend=True, yaxis_range=[-0.05,1.05], title_text=f"{dropdown_deck}'s win rate against opposing decks")
+    fig.update_layout(showlegend=True, yaxis_range=[-0.05,1.05], title_text=f"{dropdown_deck}'s win rate against opposing decks over time since {dropdown_format}'s release")
     fig.update_layout(title={"x": 0.45, "y": 0.95, "xanchor": "center", "yanchor": "middle"})
     fig.add_hline(y=0.5)
     fig.update_xaxes(ticks="outside", ticklen=10)
@@ -220,6 +230,100 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
      
      
     return fig 
+
+
+@app.callback(
+    Output('heatmap', 'figure'),
+    [
+        Input('dropdown_format', 'value'),
+        Input('dropdown_deck','value'),
+        Input('dropdown_opp_deck', 'value')
+     ]
+     )  
+def build_heatmap(selected_format, selected_active_deck, selected_opp_deck):
+    # Filter by selected format 
+    set_df = set_calendar_df[set_calendar_df["set_name"]==selected_format]
+    start_date = set_df.iloc[0]['start_date']
+    end_date = set_df.iloc[0]['end_date']
+    
+    # Filter dataframe by date
+    format_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]   
+
+    # Create list of decks selected in dropdown 
+    selected_opp_deck.append(selected_active_deck)
+    unique_decks = []
+    for deck in selected_opp_deck:
+        if deck not in unique_decks:
+            unique_decks.append(deck)
+    
+    # Filter active deck by decks in unique decks, filter again on opposing deck by unique decks also 
+    active_deck_df = format_df[format_df['deck'].isin(unique_decks)] 
+    filtered_df = active_deck_df[active_deck_df['opposing_deck'].isin(unique_decks)]
+
+    # blank heatmaps for wins and games played
+    heatmap_gp = pd.DataFrame(columns=unique_decks, index=unique_decks)
+    heatmap_wr = pd.DataFrame(columns=unique_decks, index=unique_decks)
+
+    # Create aggregated df 
+    agg_df = filtered_df.groupby(['deck', 'opposing_deck']).agg({"winrate": "mean", "games_played": "sum"}).reset_index()
+
+    # Loop through active decks to fill in columns in blank heatmaps
+    for active_deck in heatmap_wr:
+        filtered_df = agg_df[agg_df['deck']==active_deck]
+        
+        # Find win rate for every deck in index (opposing deck)
+        wr_ls = []
+        gp_ls = []
+        for deck in heatmap_wr.index:
+            if deck in filtered_df['opposing_deck'].unique():
+                winrate = filtered_df[filtered_df['opposing_deck']==deck].iloc[0]['winrate']
+                gp = filtered_df[filtered_df['opposing_deck']==deck].iloc[0]['games_played']
+                wr_ls.append(round(winrate,2))
+                gp_ls.append(gp)
+            else:
+                winrate = None
+                wr_ls.append(winrate)
+                gp_ls.append(None)
+            
+        # set column to mu 
+        heatmap_wr[active_deck] = wr_ls
+        heatmap_gp[active_deck] = gp_ls
+
+    # Heatmap hovertext
+    hovertext = []
+    for xi, xx in enumerate(heatmap_wr.columns):
+        hovertext.append(list())
+        for yi, yy in enumerate(heatmap_wr.index):
+            hovertext[-1].append(f"Active Deck: {xx}<br />Opposing Deck: {yy}<br />Win Rate: {heatmap_wr.values[xi][yi]}<br />Games Played: {heatmap_gp.values[xi][yi]}")
+
+    fig = go.Figure(data=go.Heatmap(
+                   z=heatmap_wr.values,
+                   x=heatmap_wr.columns.tolist(),
+                   y=heatmap_wr.index.tolist(),
+                   hoverinfo='text',
+                   text=hovertext,
+                   texttemplate="%{z}",
+                   textfont={"size": 12},
+                   hoverongaps = False,
+                   xgap=3,
+                   ygap=3,
+                #    zmin=0, 
+                #    zmax=1
+                   ))
+    
+    # Layout
+    title_text = f"Average win rates since {selected_format}'s release"
+    yaxis_title = "Active Decks" 
+    xaxis_title = "Opposing Decks"
+    fig.update_layout(width=800, 
+                      height=800,
+                      title_text=title_text,
+                      title={"x": 0.5, "y": 0.9, "xanchor": "center", "yanchor": "bottom"},
+                      xaxis_title=xaxis_title,
+                      yaxis_title=yaxis_title)
+
+    
+    return fig
 
 
 if __name__ == '__main__':
