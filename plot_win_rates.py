@@ -311,7 +311,7 @@ def build_heatmap(selected_format, selected_active_deck, selected_opp_deck):
     for xi, xx in enumerate(heatmap_wr.columns):
         hovertext.append(list())
         for yi, yy in enumerate(heatmap_wr.index):
-            hovertext[-1].append(f"Active Deck: {xx}<br />Opposing Deck: {yy}<br />Win Rate: {heatmap_wr.values[xi][yi]}<br />Games Played: {heatmap_gp.values[xi][yi]}")
+            hovertext[-1].append(f"Active Deck: {yy}<br />Opposing Deck: {xx}<br />Win Rate: {heatmap_wr.values[xi][yi]}<br />Games Played: {heatmap_gp.values[xi][yi]}")
 
     fig = go.Figure(data=go.Heatmap(
                    z=heatmap_wr.values,
@@ -330,8 +330,8 @@ def build_heatmap(selected_format, selected_active_deck, selected_opp_deck):
     
     # Layout
     title_text = f"Average win rates since {selected_format}'s release"
-    yaxis_title = "Active Decks" 
-    xaxis_title = "Opposing Decks"
+    xaxis_title = "Active Decks" 
+    yaxis_title = "Opposing Decks"
     fig.update_layout(width=800, 
                       height=800,
                       title_text=title_text,
