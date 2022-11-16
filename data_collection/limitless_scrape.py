@@ -386,9 +386,11 @@ def add_date_to_dict(all_tournament_dict, df_latenight):
     for key in all_tournament_dict.keys():
         row = df_latenight[df_latenight["URL"].str.contains(key)]
         date = row.iloc[0]["Date"]
+        t_name = row.iloc[0]["Name"]
         
         # Insert the date into all_tournament_dict
         all_tournament_dict[key]["date"] = date
+        all_tournament_dict[key]["name"] = t_name
         
     
     return all_tournament_dict
@@ -437,13 +439,13 @@ def update_checkpoint(wr_dict, ckpt_df):
     """
     
     # Create DataFrame for data just scraped to update the checkpoint
-    headers = ["date", "url"]
+    headers = ["date", "name", "url"]
 
     net_new_url_df = pd.DataFrame(columns=headers)
     
     # Add data to net_new_url_df
     for url, t_dict in wr_dict.items():
-            row = [t_dict["date"], url]
+            row = [t_dict["date"], t_dict["name"], url]
             length = len(net_new_url_df)
             net_new_url_df.loc[length] = row
     
@@ -460,3 +462,29 @@ def update_checkpoint(wr_dict, ckpt_df):
     ckpt_df.to_csv(path_to_latest, header=True, index=False)
     logging.info("Saving checkpoint to 'dated' folder...")
     ckpt_df.to_csv(path_to_dated, header=True, index=False)
+
+
+def scrape_results_to_csv(scrape_results_dict):
+    """Saves scraped data to CSVs so scraping isn't required everytime a change is made to analysis. 
+
+    Args:
+        scrape_results_dict (dict): Dictionary that contains all the scraped tables. 
+    """
+    for key, value in scrape_results_dict.items():
+        strings = key.split('/')
+        folder_name = '_'.join(strings[-3:-1])
+        folder_path = f"scraped_data/{folder_name}"
+        os.makedirs(folder_path, exist_ok=True)
+        for table_name, table_value in value.items():
+            if table_name == "players":
+                filename = "players.csv"
+                file_path = f"{folder_path}/{filename}"
+                df = value[table_name]
+                df.to_csv(file_path, index=False, header=True)
+            if table_name == "pairings":
+                pairings_dict = value[table_name]
+                for round_dict, round_dict_value in pairings_dict.items():
+                    round_filename = f"{round_dict.split('_dict')[0]}.csv"
+                    round_file_path = f"{folder_path}/{round_filename}"
+                    round_df = round_dict_value['df']
+                    round_df.to_csv(round_file_path, index=False, header=True)

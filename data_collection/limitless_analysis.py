@@ -8,6 +8,10 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
 
 def deck_and_records(round_dict, players_df):
     """Join the players_df and the Pairings DataFrames.
@@ -55,41 +59,6 @@ def deck_and_records(round_dict, players_df):
 
     return round_df
 
-# No longer in use?
-# # Define function for multi_tournament_round_analysis
-# def multi_tournament_round_analysis(all_tournament_dict, round_num):
-#     """ 
-#     Across multiple tournaments, find out the deck you're most likely going to encounter based on 
-#     your record.
-    
-#     Arguments:
-#         all_tournament_dict (dict): Dictionary with all the dataframes for players and pairings
-#         round_num (int): Round we want to analyze
-#     """
-#     proc_dict = {}
-    
-#     # deck_and_records requires round_dict, and players_df
-#     for t in all_tournament_dict:
-#         t_dict = all_tournament_dict[t]
-#         players_df = t_dict["players"]    # This is a df
-#         pairings_dict = t_dict["pairings"]
-#         round_dict = pairings_dict[f"round_{round_num}_dict"]
-        
-#         # Process data for this round_num for each tournament
-#         round_df = deck_and_records(round_dict, players_df)
-        
-#         # Save processed data to proc_dict
-#         proc_dict[f"{t}"] = round_df
-        
-#     # Concatenate all df in proc_dict
-#     all_proc_df = pd.DataFrame()
-    
-#     for d in proc_dict:
-#         temp_df = proc_dict[d]
-#         all_proc_df = pd.concat([all_proc_df, temp_df], ignore_index=True)
-        
-#     return all_proc_df
-
 
 def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
     """Count wins, losses and ties for every matchup in a round. 
@@ -114,6 +83,9 @@ def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
     # find unique archetypes 
     all_archetypes = standings_df['Deck'].unique().tolist()
     
+    # Keep track of how many matches were dropped
+    games_dropped = 0
+
     # For each archetype, find the winrates against each other archetype
     for archetype in all_archetypes:
 
@@ -137,12 +109,18 @@ def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
                 mu_dict[opposing_deck] = {"wins": 0, "losses": 0, "ties": 0}
 
             # Check result and update mu_dict
-            if row["Winning Deck"] == row["Player 1 Deck"]:
+            if row["Player 1 Deck"] == row["Player 2 Deck"]:
+                mu_dict[opposing_deck]["wins"] += 0.5
+                mu_dict[opposing_deck]["losses"] += 0.5
+            elif row["Winning Deck"] == row["Player 1 Deck"]:
                 mu_dict[opposing_deck]["wins"] += 1
-            if (row["Winning Deck"] == row['Player 2 Deck']) or (row["Winning Deck"] == "Loss"):
+            elif (row["Winning Deck"] == row['Player 2 Deck']) or (row["Winning Deck"] == "Loss"):
                 mu_dict[opposing_deck]["losses"] += 1
-            if row["Winning Deck"] == "Draw":
+            elif row["Winning Deck"] == "Draw":
                 mu_dict[opposing_deck]["ties"] += 1
+            else:
+                games_dropped += 1
+                logging.info(f"Match result undetermined...\n{row}")
         
         # Update winrates when Player 2 played the given archetype
         for i in range(len(temp_df2)):
@@ -154,17 +132,24 @@ def archetype_wr_per_round(round_dict, standings_df, all_archetype_dict):
                 mu_dict[opposing_deck] = {"wins": 0, "losses": 0, "ties": 0}
 
             # Check result and update mu_dict
-            if row["Winning Deck"] == row["Player 2 Deck"]:
+            if row["Player 1 Deck"] == row["Player 2 Deck"]:
+                mu_dict[opposing_deck]["wins"] += 0.5
+                mu_dict[opposing_deck]["losses"] += 0.5
+            elif row["Winning Deck"] == row["Player 2 Deck"]:
                 mu_dict[opposing_deck]["wins"] += 1
-            if (row["Winning Deck"] == row["Player 1 Deck"]) or (row["Winning Deck"] == "Loss"):
+            elif (row["Winning Deck"] == row["Player 1 Deck"]) or (row["Winning Deck"] == "Loss"):
                 mu_dict[opposing_deck]["losses"] += 1
-            if row["Winning Deck"] == "Draw":
+            elif row["Winning Deck"] == "Draw":
                 mu_dict[opposing_deck]["ties"] += 1
+            else:
+                games_dropped += 1
+                logging.info(f"Match result undetermined...\n{row}")
 
         # Update all_archetype_dict
         all_archetype_dict[archetype] = mu_dict
 
-    
+    # logging.info(f"Games dropped .... {games_dropped}")
+
     return all_archetype_dict
 
 
@@ -208,6 +193,7 @@ def archetype_wr_per_tournament(t_dict):
         all_archetype_dict = archetype_wr_per_round(round_dict, standings_df, all_archetype_dict)
     
     # Save all_archetype_dict into t_wlt_dict
+    t_wlt_dict["name"] = t_dict["name"]
     t_wlt_dict["date"] = t_dict["date"]
     t_wlt_dict["t_wlt_dict"] = all_archetype_dict
     
@@ -300,7 +286,7 @@ def create_plot_df(all_tournament_results_dict):
 
     """
     
-    headers = ["deck", "opposing_deck", "t_url", "date", "winrate", "games_played"]
+    headers = ["deck", "opposing_deck", "t_url", "date", "wins", "winrate", "games_played"]
     plot_df = pd.DataFrame(columns = headers)
 
     # first loop gets t_dict as value
@@ -310,7 +296,7 @@ def create_plot_df(all_tournament_results_dict):
         for deck_of_interest, archetype_dict in t_dict['t_wlt_dict'].items():
             # Third loop gives opposing deck name and WLT counts
             for opposing_deck, wlt_counts in archetype_dict.items():
-                row = [deck_of_interest, opposing_deck, t_url, date, wlt_counts['winrate'], wlt_counts['games_played']]
+                row = [deck_of_interest, opposing_deck, t_url, date, wlt_counts["wins"], wlt_counts['winrate'], wlt_counts['games_played']]
 
                 # Put data in df 
                 length = len(plot_df)
@@ -318,6 +304,22 @@ def create_plot_df(all_tournament_results_dict):
 
 
     return plot_df
+
+
+def total_gp(df, row):
+    """Calculates total games played across tournaments for a particular matchup.
+
+    Args:
+        df (DataFrame): DataFrame containing processed data.
+        row (Series): Pandas Series representing a row in the df. 
+
+    Returns:
+        total_games: Total games played across tournaments for a particular matchup.
+    """
+    temp_df = df[(df["deck"]==row["deck"]) & (df["opposing_deck"]==row["opposing_deck"])]
+    total_games = temp_df.sum()["games_played"]
+    
+    return total_games
 
 
 def filter_plot_df(plot_df, deck):
@@ -337,7 +339,13 @@ def filter_plot_df(plot_df, deck):
     """
     
     filtered_df = plot_df[plot_df["deck"] == deck]
-    filtered_df = filtered_df.groupby(["deck", "opposing_deck", "date"]).agg({"winrate":"mean", "games_played": "sum"}).reset_index()
+    
+    # # Add total games played, weight, and weighted win rate
+    # filtered_df["total_games"] = filtered_df.apply(lambda x: total_gp(filtered_df, x), axis=1)
+    # filtered_df["weight"] = filtered_df["games_played"]/filtered_df["total_games"]
+    # filtered_df["wt_wr"] = filtered_df["winrate"] * filtered_df["weight"]
+
+    # filtered_df = filtered_df.groupby(["deck", "opposing_deck", "date"]).agg({"wt_wr":"sum", "games_played": "sum", "winrate": "mean"}).reset_index()
     
 
     return filtered_df 

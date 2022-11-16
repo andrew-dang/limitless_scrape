@@ -199,24 +199,36 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
     end_date = set_df.iloc[0]['end_date']
     
     # Filter dataframe by date
-    filtered_by_date_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
+    format_df = plot_df[(plot_df['date'] >= start_date) & (plot_df['date'] <= end_date)]
     
     # Filter for deck of interest
-    filtered_df = filter_plot_df(filtered_by_date_df, dropdown_deck)
+    active_deck_df = filter_plot_df(format_df, dropdown_deck)
     
     # Filter the data for opposing deck
-    temp_df = filtered_df[filtered_df["opposing_deck"].isin(dropdown_opp_deck)]
+    opp_deck_df = active_deck_df[active_deck_df["opposing_deck"].isin(dropdown_opp_deck)]
+
+    # Aggregate by day - need weighted win rates here
+    gp_per_day = opp_deck_df.groupby(["deck", "opposing_deck", "date"]).sum().reset_index()
+    gp_per_day["gp_per_day"] = gp_per_day["games_played"]
+    
+    join_conditions = ["deck", "opposing_deck", "date"]
+    weighted_df = opp_deck_df.merge(gp_per_day[["deck", "opposing_deck", "date", "gp_per_day"]], how="left", on=join_conditions)
+
+    weighted_df['wt'] = weighted_df["games_played"] / weighted_df["gp_per_day"]
+    weighted_df['wt_wr'] = round(weighted_df['winrate'] * weighted_df['wt'], 2)
+
+    weighted_df = weighted_df.groupby(["deck", "opposing_deck", "date"]).sum(["games_played", "wt_wr"]).reset_index()
      
     # Create line graph
-    fig = px.scatter(temp_df, 
+    fig = px.scatter(weighted_df, 
                      x='date', 
-                     y='winrate', 
+                     y='wt_wr', 
                      color='opposing_deck', 
                      hover_data=["games_played"], 
                      size='games_played', 
                      labels=dict(date="Date", 
                                  opposing_deck="Opposing Deck", 
-                                 winrate="Win Rate", 
+                                 wt_wr="Win Rate", 
                                  games_played="Games Played")) \
                                  .update_traces(mode='lines+markers')
     
@@ -264,8 +276,13 @@ def build_heatmap(selected_format, selected_active_deck, selected_opp_deck):
     heatmap_gp = pd.DataFrame(columns=unique_decks, index=unique_decks)
     heatmap_wr = pd.DataFrame(columns=unique_decks, index=unique_decks)
 
+    # Get total games played and weighted win rates
+    filtered_df["total_games"] = filtered_df.apply(lambda x: total_gp(filtered_df, x), axis=1)
+    filtered_df["weight"] = filtered_df["games_played"]/filtered_df["total_games"]
+    filtered_df["wt_wr"] = filtered_df["winrate"] * filtered_df["weight"]
+    
     # Create aggregated df 
-    agg_df = filtered_df.groupby(['deck', 'opposing_deck']).agg({"winrate": "mean", "games_played": "sum"}).reset_index()
+    agg_df = filtered_df.groupby(['deck', 'opposing_deck']).agg({"wt_wr": "sum", "games_played": "sum"}).reset_index()
 
     # Loop through active decks to fill in columns in blank heatmaps
     for active_deck in heatmap_wr:
@@ -276,7 +293,7 @@ def build_heatmap(selected_format, selected_active_deck, selected_opp_deck):
         gp_ls = []
         for deck in heatmap_wr.index:
             if deck in filtered_df['opposing_deck'].unique():
-                winrate = filtered_df[filtered_df['opposing_deck']==deck].iloc[0]['winrate']
+                winrate = filtered_df[filtered_df['opposing_deck']==deck].iloc[0]['wt_wr']
                 gp = filtered_df[filtered_df['opposing_deck']==deck].iloc[0]['games_played']
                 wr_ls.append(round(winrate,2))
                 gp_ls.append(gp)
