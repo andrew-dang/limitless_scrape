@@ -357,11 +357,12 @@ def scrape_for_dates_and_url():
         df.loc[length] = row_data
 
     # filter tournaments for late nights; exclude special events 
-    df_latenight = df[
-        (df[df.columns[1]].str.contains("Late Night #\d{2}")) | 
-        (df[df.columns[1]].str.contains("Late Night Series #")) & 
-        (~df[df.columns[1]].str.contains("Late Late"))
-        ]
+df_latenight = df[
+    (df[df.columns[1]].str.contains("Late Night #\d{2}")) | 
+    (df[df.columns[1]].str.contains("Late Night Series #")) & 
+    (~df[df.columns[1]].str.contains("Late Late")) |
+    (df[df.columns[1]].str.contains("Late Night.*Special"))
+    ]
     
     return df_latenight
 
