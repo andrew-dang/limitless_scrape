@@ -1,4 +1,4 @@
-name: dash_app #Environment name
+name: limitlesstcg #Environment name
 dependencies:
   - python=3.10
   - pip:
