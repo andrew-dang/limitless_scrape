@@ -38,7 +38,7 @@ use_checkpoint = True
 # 1. Create DataFrame that contans dates and URLS for each tournament
 df_latenight = scrape_for_dates_and_url()
 
-# 2. Use checkpoint. If not using checkpoint, scrape everything?
+# 2. Use checkpoint. If not using checkpoint, scrape everything
 if use_checkpoint == True:
     logging.info("Using checkpoint. Loading in checkpoint...")
     ckpt_df = pd.read_csv("checkpoint/latest/checkpoint.csv")
@@ -58,6 +58,7 @@ if use_checkpoint == True:
     scrape_results_dict = add_date_to_dict(scrape_results_dict, df_latenight)
 
     # 6a. Save results to csv
+    logging.info("Saving scraped results...")
     scrape_results_to_csv(scrape_results_dict)
     
     # 7. Process data: Get WLT counts for each deck in each tournament
@@ -84,17 +85,18 @@ else:
     scrape_results_dict = add_date_to_dict(scrape_results_dict, df_latenight)
 
     # Save results to csv
+    logging.info("Saving scraped results...")
     scrape_results_to_csv(scrape_results_dict)
     
     # Process data: Get WLT counts for each deck in each tournament
     all_tournament_results_dict = multi_tournament_wr_per_tournament(scrape_results_dict)
 
     # Calculate winrates
+    logging.info('Calculating win rates...')
     multi_tournament_wr_calc(all_tournament_results_dict)
     
     # Create plot_df
     plot_df = create_plot_df(all_tournament_results_dict)
-    
 
     # Create blank current results and append net new results (plot_df)
     headers = ["deck", "opposing_deck", "t_url", "date", "wins", "winrate", "games_played"]
