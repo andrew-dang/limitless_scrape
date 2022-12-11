@@ -27,6 +27,9 @@ set_calendar_df = pd.read_csv('set_release_calendar.csv')
 # Make sure set_names don't have white space
 set_calendar_df["set_name"] = set_calendar_df["set_name"].str.strip()
 
+# Find latest set
+LATEST_SET = set_calendar_df["set_name"].unique().tolist()[-1]
+
 
 app.layout = html.Div([
     
@@ -41,7 +44,7 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='dropdown_format', 
             options=[{'label': x, 'value': x} for x in set_calendar_df['set_name'].unique()], 
-            value="Lost Origin",
+            value=LATEST_SET,
             multi=False, 
             disabled=False,
             clearable=True, 
