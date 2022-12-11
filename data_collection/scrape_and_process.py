@@ -32,7 +32,7 @@ logger.setLevel(logging.INFO)
 
 
 # Use checkpoint or scrape everything?
-use_checkpoint = True
+use_checkpoint = False
 
 # %%
 # 1. Create DataFrame that contans dates and URLS for each tournament
