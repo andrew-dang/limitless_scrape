@@ -5,7 +5,7 @@ Place,Name,Country,Points,Record,Opp. Win %,Opp. Opp. %,Deck,List,Player ID
 4,Myungjoon Kim,,35,11 - 3 - 2,,,Lost Zone Box,,jclover
 5,Drandonbean02,,34,11 - 3 - 1,,,Vikavolt Regieleki,,drandonbean02
 6,FelipePacca,,33,10 - 2 - 3,,,Vikavolt Regieleki,,felipepacca
-7,Fehér Viktor,,32,10 - 3 - 2,,,Miltank,,vyndra
+7,Fehér Viktor,,32,10 - 3 - 2,,,Miltank Yveltal,,vyndra
 8,DoomLoud,,31,10 - 4 - 1,,,Palkia Inteleon,,doomloud
 9,Nico Alabas,,30,10 - 4 - 0,48.00%,52.33%,Lost Zone Box,,carrypotter1
 10,FabrizioINSI10,,30,10 - 4 - 0,42.00%,62.25%,Mew Genesect,,fabrizioinsi10
@@ -43,7 +43,7 @@ Place,Name,Country,Points,Record,Opp. Win %,Opp. Opp. %,Deck,List,Player ID
 42,Suttinai Thong-ngam,,18,6 - 3 - 0,44.69%,49.82%,Giratina LZ Box,,bissbiw
 43,JorgeR,,18,6 - 3 - 0,42.84%,56.72%,Mew Genesect,,jorger
 44,pjwitusik,,16,5 - 3 - 1,63.02%,56.68%,Mew Genesect,,pjwitusik
-45,lucke322,,16,5 - 3 - 1,58.63%,54.08%,Giratina,,lucke322
+45,lucke322,,16,5 - 3 - 1,58.63%,54.08%,Giratina LZ Box,,lucke322
 46,Flynnus89,,16,5 - 3 - 1,56.83%,54.45%,Hisuian Zoroark,,flynnus89
 47,17tribe,,16,5 - 3 - 1,56.79%,54.20%,Arceus Duraludon,,17tribe
 48,Shaarni,,16,5 - 3 - 1,49.87%,54.79%,Palkia Inteleon,,shaarni
@@ -68,7 +68,7 @@ Place,Name,Country,Points,Record,Opp. Win %,Opp. Opp. %,Deck,List,Player ID
 67,Chrnus,,15,5 - 4 - 0,45.31%,51.12%,Kyurem Palkia,,chrnus
 68,EXfiveDaiveR,,15,5 - 4 - 0,40.43%,48.73%,Dialga,,exfivedaiver
 69,LeChibreDeSatan,,15,5 - 4 - 0,38.24%,46.45%,Hisuian Zoroark,,lechibredesatan
-70,bevin,,13,4 - 3 - 1drop,52.43%,52.96%,Giratina,,bevin
+70,bevin,,13,4 - 3 - 1drop,52.43%,52.96%,Giratina LZ Box,,bevin
 71,FirexXY,,12,4 - 3 - 0drop,61.93%,57.02%,Giratina LZ Box,,firexxy
 72,StigmaAKAstigma,,12,4 - 3 - 0drop,58.96%,55.64%,Lugia Archeops,,stigmaakastigma
 73,Kimmy S,,12,4 - 3 - 0drop,58.16%,55.70%,Mew Genesect,,jasonleonard
@@ -131,7 +131,7 @@ Place,Name,Country,Points,Record,Opp. Win %,Opp. Opp. %,Deck,List,Player ID
 130,Ezekiel Toman,,6,2 - 2 - 0drop,59.42%,55.07%,Giratina LZ Box,,red5ground
 131,yinse1126,,6,2 - 2 - 0drop,58.68%,55.42%,Giratina LZ Box,,yinse1126
 132,Kondoriano,,6,2 - 2 - 0drop,57.50%,51.94%,Regis,,kondoriano
-133,UltraNko,,6,2 - 3 - 0drop,56.67%,52.42%,Giratina,,ultranko
+133,UltraNko,,6,2 - 3 - 0drop,56.67%,52.42%,Giratina LZ Box,,ultranko
 134,Akira N,,6,2 - 2 - 0drop,54.86%,57.24%,Lugia Archeops,,akisunflower
 135,BanKMaRu,,6,2 - 7 - 0,50.02%,46.16%,Mew Genesect,,bankmaru
 136,robertsouzam,,6,2 - 3 - 0drop,49.44%,48.17%,Kyurem Palkia,,robertsouzam
@@ -197,7 +197,7 @@ Place,Name,Country,Points,Record,Opp. Win %,Opp. Opp. %,Deck,List,Player ID
 196,Zahir Abdul Hamid,,3,1 - 3 - 0drop,45.14%,48.36%,Vikavolt Regieleki,,zedz
 197,shpanda,,3,1 - 3 - 0drop,45.12%,46.33%,Mew Genesect,,shpanda
 198,logan4night,,3,1 - 4 - 0drop,44.35%,46.37%,Lugia Archeops,,logan4night
-199,GMARCHI,,3,1 - 2 - 0drop,43.52%,50.81%,Giratina,,gmarchi
+199,GMARCHI,,3,1 - 2 - 0drop,43.52%,50.81%,Giratina LZ Box,,gmarchi
 200,Rex0746,,3,1 - 3 - 0drop,43.04%,38.87%,Zoroark Box,,rex0746
 201,StarlitBalance,,3,1 - 3 - 0drop,42.92%,48.71%,Arceus,,starlitbalance
 202,Vini Fernandez,,3,1 - 3 - 0drop,42.53%,49.75%,Zoroark Box,,warexpert
@@ -227,7 +227,7 @@ Place,Name,Country,Points,Record,Opp. Win %,Opp. Opp. %,Deck,List,Player ID
 226,Sc,,0,0 - 3 - 0drop,50.93%,50.23%,Giratina LZ Box,,sc
 227,Bombtrack,,0,0 - 2 - 0drop,50.40%,45.75%,Hisuian Zoroark,,bombtrack
 228,Minekaze,,0,0 - 1 - 0drop,50.00%,58.06%,Giratina LZ Box,,minekaze
-229,Juan,,0,0 - 2 - 0drop,50.00%,50.36%,Other,,juan
+229,Juan,,0,0 - 2 - 0drop,50.00%,50.36%,Hisuian Arcanine,,juan
 230,denerrigoli,,0,0 - 1 - 0drop,50.00%,48.31%,Giratina LZ Box,,denerrigoli
 231,mille1216,,0,0 - 3 - 0drop,49.44%,50.79%,Kyurem Palkia,,mille1216
 232,Kannagi,,0,0 - 2 - 0drop,48.61%,54.08%,Lugia Archeops,,kannagi
