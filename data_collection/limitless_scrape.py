@@ -235,12 +235,13 @@ def scrape_players_and_decks(url):
         
         # Deck name is in another html tag
         for it, value in enumerate(data):
-            title = value.get('title')
-            if title == None:
-                continue
-            else: 
-                deckname = title
-                pos = it
+            span = value.find("span")
+            if span != None:
+                if "Dropped" in span.get('data-tooltip'):
+                    continue
+                else:
+                    deckname = span.get('data-tooltip')
+                    pos = it
 
         # Get all the other information in the table 
         row_data = [td.text.strip() for td in data]
