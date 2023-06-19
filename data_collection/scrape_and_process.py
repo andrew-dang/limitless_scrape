@@ -43,11 +43,14 @@ if use_checkpoint == True:
     logging.info("Using checkpoint. Loading in checkpoint...")
     ckpt_df = pd.read_csv("checkpoint/latest/checkpoint.csv")
     current_results_df = pd.read_csv("results/latest/scrape_results.csv")
-    
+    ignore_df = pd.read_csv("checkpoint/latest/ignore_list.csv")
+
     # 3. and 4. Instead of filtering the DataFrame, we can use list comprehension to find net new urls. 
     ckpt_url_ls = ckpt_df['url'].unique().tolist()
     all_url_ls = df_latenight['URL'].unique().tolist()
-    net_new_url_ls = [url for url in all_url_ls if url not in ckpt_url_ls] 
+    ignore_ls = ignore_df['url'].unique().tolist()
+    combined_ignore_ls = ckpt_url_ls + ignore_ls 
+    net_new_url_ls = [url for url in all_url_ls if url not in combined_ignore_ls] 
     
     # 5. Create url dict; Only use first 2 urls as a test
     url_dict = create_urls(net_new_url_ls)
