@@ -221,39 +221,34 @@ def scrape_players_and_decks(url):
     # Create df
     df = pd.DataFrame(columns = headers)
 
-    header_row = player_table.find_all('tr')[0]
-    
-    if "Deck" not in header_row.get_text('th'):
-        pass
-    else:
-        # Find the rows
-        for row in player_table.find_all('tr')[1:]:
-            data = row.find_all('td')   
+    # Find the rows
+    for row in player_table.find_all('tr')[1:]:
+        data = row.find_all('td')   
+        
+    # href found in second column; used to get player ID 
+        for i, td in enumerate(data):
+            if i == 1:
+                a = td.find('a')
+                if a != None:
+                    href = a.get('href')
+                    player_id = href.split('player/')[-1]
+        
+        # Deck name is in another html tag
+        for it, value in enumerate(data):
+            span = value.find("span")
+            if span != None:
+                if "Dropped" in span.get('data-tooltip'):
+                    continue
+                else:
+                    deckname = span.get('data-tooltip')
+                    pos = it
 
-        # href found in second column; used to get player ID 
-            for i, td in enumerate(data):
-                if i == 1:
-                    a = td.find('a')
-                    if a != None:
-                        href = a.get('href')
-                        player_id = href.split('player/')[-1]
-
-            # Deck name is in another html tag
-            for it, value in enumerate(data):
-                span = value.find("span")
-                if span != None:
-                    if "Dropped" in span.get('data-tooltip'):
-                        continue
-                    else:
-                        deckname = span.get('data-tooltip')
-                        pos = it
-
-            # Get all the other information in the table 
-            row_data = [td.text.strip() for td in data]
-            row_data.append(player_id)
-            row_data[pos] = deckname
-            length = len(df)
-            df.loc[length] = row_data
+        # Get all the other information in the table 
+        row_data = [td.text.strip() for td in data]
+        row_data.append(player_id)
+        row_data[pos] = deckname
+        length = len(df)
+        df.loc[length] = row_data
   
     return df
         
