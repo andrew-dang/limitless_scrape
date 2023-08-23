@@ -364,10 +364,17 @@ def scrape_for_dates_and_url():
 
     # filter tournaments for late nights; exclude special events 
     df_latenight = df[
-        (df[df.columns[1]].str.contains("Late Night #\d{2}")) | 
-        (df[df.columns[1]].str.contains("Late Night Series #")) & 
-        (~df[df.columns[1]].str.contains("Late Late"))
-        ]
+    (~df[df.columns[1]].str.contains("Late Late")) &
+    (~df[df.columns[1]].str.contains("Invitational")) &
+    (~df[df.columns[1]].str.contains("Testing")) &
+    (~df[df.columns[1]].str.contains("Bonus Event")) &
+    (~df[df.columns[1]].str.contains("Marvel Snap")) & 
+    (~df[df.columns[1]].str.contains("Atlas")) &
+    (~df[df.columns[1]].str.contains("Upper Hand")) & 
+    (~df[df.columns[1]].str.contains("Metafy Regionals")) &
+    (~df[df.columns[1]].str.contains("Special")) &
+    (~df[df.columns[1]].str.contains("Fan Expo"))
+    ]
     
     return df_latenight
 
