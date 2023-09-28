@@ -8,6 +8,8 @@ import pandas as pd
 from limitless_scrape import *
 from limitless_analysis import *
 
+import textwrap
+
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly 
@@ -30,67 +32,71 @@ set_calendar_df["set_name"] = set_calendar_df["set_name"].str.strip()
 # Find latest set
 LATEST_SET = set_calendar_df["set_name"].unique().tolist()[-1]
 
+def textwrapper(s, width=50):
+    return "<br>".join(textwrap.wrap(s,width=width))
 
 app.layout = html.Div([
     
-    html.Div([
-        dcc.Graph(id='our_graph')
-    ], className='seven columns'),
-    
-    html.Div([
-        
-        html.Br(), 
-        html.Label(["Choose archetypes to display on the graph:"], style={'font-weight': 'bold', "text-align": "center"}),
-        dcc.Dropdown(
-            id='dropdown_format', 
-            options=[{'label': x, 'value': x} for x in set_calendar_df['set_name'].unique()], 
-            value=LATEST_SET,
-            multi=False, 
-            disabled=False,
-            clearable=True, 
-            searchable=True,
-            placeholder='Select a set',
-            persistence=True, 
-            persistence_type='memory'),
-        
-        dcc.Dropdown(
-            id='dropdown_deck', 
-            options=[{'label': x, 'value': x} for x in plot_df.sort_values('deck')['deck'].unique()], 
- #           value='Mew Genesect',
-            multi=False, 
-            disabled=False,
-            clearable=True, 
-            searchable=True,
-            placeholder='Select archetype',
-            persistence='string', 
-            persistence_type='memory'),
-        
-        dcc.Dropdown(
-            id='dropdown_opp_deck', 
-            options=[{'label': x, 'value': x} for x in plot_df.sort_values('opposing_deck')['opposing_deck'].unique()], 
-            value = ["Palkia Inteleon", "Mew Genesect", "Kyurem Palkia", "Giratina LZ Box", "Lost Zone Box"],
-            multi=True, 
-            disabled=False,
-            clearable=True, 
-            searchable=True,
-            placeholder='Show winrates against...',
-            persistence='string', 
-            persistence_type='memory'),
-            
-        
-    ], className='four columns'),
+    html.Div(
+        className="my_row",
+        children=[ 
+            html.Div(
+                className="dropdown_card",
+                children=[
+                    html.Label(["Choose archetypes to display on the graph:"], style={'font-weight': 'bold', "display": "block", "text-align": "center"}),
+                    dcc.Dropdown(
+                        id='dropdown_format', 
+                        options=[{'label': x, 'value': x} for x in set_calendar_df['set_name'].unique()], 
+                        value=LATEST_SET,
+                        multi=False, 
+                        disabled=False,
+                        clearable=True, 
+                        searchable=True,
+                        placeholder='Select a set',
+                        persistence=True, 
+                        persistence_type='memory'),
+                    
+                    dcc.Dropdown(
+                        id='dropdown_deck', 
+                        options=[{'label': x, 'value': x} for x in plot_df.sort_values('deck')['deck'].unique()], 
+            #           value='Mew Genesect',
+                        multi=False, 
+                        disabled=False,
+                        clearable=True, 
+                        searchable=True,
+                        placeholder='Select archetype',
+                        persistence='string', 
+                        persistence_type='memory'),
+                    
+                    dcc.Dropdown(
+                        id='dropdown_opp_deck', 
+                        options=[{'label': x, 'value': x} for x in plot_df.sort_values('opposing_deck')['opposing_deck'].unique()], 
+                        value = ["Palkia Inteleon", "Mew Genesect", "Kyurem Palkia", "Giratina LZ Box", "Lost Zone Box"],
+                        multi=True, 
+                        disabled=False,
+                        clearable=True, 
+                        searchable=True,
+                        placeholder='Show winrates against...',
+                        persistence='string', 
+                        persistence_type='memory'),
+                ])
+            ]
+    ),
 
-    html.Div([
-        dcc.Graph(id='heatmap')
-    ], className='four columns')
-    
-])        
+    html.Div(
+        className="my_row",
+        children=[
+            html.Div([
+                dcc.Graph(id='our_graph')
+                ], className='graph_card'),
+
+            html.Div([
+                dcc.Graph(id='heatmap')
+                ], className='graph_card'),
+        ]
+    )
+], className="create_container")        
         
-# # Set persistence for dropdown_format
-# @app.callback(
-#     Output('dropdown_format', 'persistence')
-#     Input('dropdown_format', 'value')
-# )
 
 # Filter what active decks are available in the dropdown based on format that is selected
 @app.callback(
@@ -236,8 +242,12 @@ def build_graph(dropdown_format, dropdown_deck, dropdown_opp_deck):
                                  .update_traces(mode='lines+markers')
     
     # Update layout
-    fig.update_layout(width=1080, height=720)
-    fig.update_layout(showlegend=True, yaxis_range=[-0.05,1.05], title_text=f"{dropdown_deck}'s win rate against opposing decks over time since {dropdown_format}'s release")
+    # fig.update_layout(width=1080, height=720)
+    fig.update_layout(
+        showlegend=True, 
+        yaxis_range=[-0.05,1.05], 
+        title_text=textwrapper(f"{dropdown_deck}'s win rate against opposing decks over time since {dropdown_format}'s release")
+    )
     fig.update_layout(title={"x": 0.45, "y": 0.95, "xanchor": "center", "yanchor": "middle"})
     fig.add_hline(y=0.5)
     fig.update_xaxes(ticks="outside", ticklen=10)
@@ -335,16 +345,16 @@ def build_heatmap(selected_format, selected_active_deck, selected_opp_deck):
     title_text = f"Average win rates since {selected_format}'s release"
     xaxis_title = "Active Decks" 
     yaxis_title = "Opposing Decks"
-    fig.update_layout(width=800, 
-                      height=800,
+    fig.update_layout(
                       title_text=title_text,
                       title={"x": 0.5, "y": 0.9, "xanchor": "center", "yanchor": "bottom"},
                       xaxis_title=xaxis_title,
-                      yaxis_title=yaxis_title)
+                      yaxis_title=yaxis_title
+                    )
 
     
     return fig
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True, port=8080)
